@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "event": {
+    "title": "Bachelor weekend in Berlin",
+    "occasion": "Bachelor weekend",
+    "summary": "A bachelor weekend in Berlin for 8 friends flying in from Warsaw, Friday 4 to Sunday 6 December 2026. The plan shortlists a Saturday-evening hub, a concert or football match and a hotel near the action. Dinner was dropped from the plan.",
+    "city": "Berlin",
+    "country": "Germany",
+    "country_code": "DE",
+    "timezone": "Europe/Berlin",
+    "date_start": "2026-12-04",
+    "date_end": "2026-12-06",
+    "guests": 8,
+    "budget_limit": 3500,
+    "currency": "EUR",
+    "language": "en"
+  },
+  "slots": [
+    {
+      "id": "accommodation",
+      "category": "accommodation",
+      "title": "Hotel, 2 nights (4 rooms, 2 guests each)",
+      "date": "2026-12-04",
+      "start": "15:00",
+      "end": "12:00",
+      "end_date": "2026-12-06",
+      "note": "Friday check-in to Sunday check-out.",
+      "candidates": [
+        {
+          "rank": 1,
+          "name": "Hotel Indigo Berlin - East Side Gallery",
+          "summary": "Hotel on Uber Platz, 1-3 minutes on foot from Uber Arena.",
+          "address": "Mühlenstr. 13-19, 10243 Berlin",
+          "price": {
+            "amount": 960,
+            "currency": "EUR",
+            "basis": "4 rooms x 2 nights x 120 (indicative rate, no breakfast)"
+          },
+          "facts": [
+            "Check-in from 15:00, check-out 12:00",
+            "Breakfast about 23 EUR per person extra"
+          ],
+          "why": [
+            "Right next to the arena",
+            "Confirm twin or 2-bed rooms"
+          ],
+          "contact": {
+            "website": "https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html",
+            "booking": "https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html"
+          },
+          "source": "https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html"
+        },
+        {
+          "rank": 2,
+          "name": "Hampton by Hilton Berlin City East Side Gallery",
+          "summary": "Hotel on Uber Platz, about 100 m from the East Side Gallery.",
+          "address": "Mildred-Harnack-Straße 15, 10243 Berlin",
+          "price": {
+            "amount": 920,
+            "currency": "EUR",
+            "basis": "4 rooms x 2 nights x 115 (indicative rate)"
+          },
+          "facts": [
+            "Twin rooms with 2 single beds listed",
+            "Fully refundable rates offered"
+          ],
+          "why": [
+            "Same square as the arena, 2-5 minutes on foot",
+            "Suits friends sharing rooms"
+          ],
+          "contact": {
+            "website": "https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html",
+            "booking": "https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html",
+            "phone": "+49 30 29381380",
+            "email": "info@hamptonberlin-eastsidegallery.de"
+          },
+          "source": "https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html"
+        },
+        {
+          "rank": 3,
+          "name": "Hotel Goldmarie",
+          "summary": "Hotel on Warschauer Straße, about 9 minutes on foot from Uber Arena.",
+          "address": "Warschauer Str. 58, 10243 Berlin",
+          "price": {
+            "amount": 880,
+            "currency": "EUR",
+            "basis": "4 rooms x 2 nights x 110 (indicative rate)"
+          },
+          "facts": [
+            "Check-in from 14:00, check-out 11:00",
+            "Listed rate not freely cancellable"
+          ],
+          "why": [
+            "Cheapest of the three",
+            "Next to bars and Warschauer Straße station"
+          ],
+          "contact": {
+            "website": "https://www.hrs.com/en/hotel/565310",
+            "booking": "https://www.hrs.com/en/hotel/565310"
+          },
+          "source": "https://www.hrs.com/en/hotel/565310"
+        }
+      ]
+    },
+    {
+      "id": "venue",
+      "category": "venue",
+      "title": "Saturday evening hub",
+      "date": "2026-12-05",
+      "start": "17:00",
+      "end": "23:30",
+      "end_date": null,
+      "note": "The area where the Saturday evening happens; tickets are priced under the show.",
+      "candidates": [
+        {
+          "rank": 1,
+          "name": "Uber Platz (Uber Arena and Uber Eats Music Hall district), Friedrichshain",
+          "summary": "Entertainment district with arena, music hall, bars, restaurants and two hotels on the square.",
+          "address": "Uber-Platz 1, 10243 Berlin",
+          "price": {
+            "amount": 0,
+            "currency": "EUR",
+            "basis": "area is free to visit; event tickets priced separately"
+          },
+          "facts": [
+            "Arena up to about 17,000 for concerts",
+            "Indoor venues, inclusion service page available"
+          ],
+          "why": [
+            "SDP concert listed here on 5 Dec 2026",
+            "Most compact base, no weather fallback needed"
+          ],
+          "contact": {
+            "website": "https://www.uber-platz.de",
+            "booking": "https://www.uber-platz.de/kontakt",
+            "phone": "+49 1806 570070"
+          },
+          "source": "https://www.uber-arena.de"
+        },
+        {
+          "rank": 2,
+          "name": "Stadion An der Alten Försterei (Union Berlin), Köpenick",
+          "summary": "Home ground of 1. FC Union Berlin, in Köpenick.",
+          "address": "An der Wuhlheide 263, 12555 Berlin",
+          "price": {
+            "amount": 0,
+            "currency": "EUR",
+            "basis": "area is free to visit; match tickets priced separately"
+          },
+          "facts": [
+            "About 22,000 capacity (not on the club page)",
+            "Partly outdoor"
+          ],
+          "why": [
+            "Club site lists Union v Hamburger SV on 5 Dec 2026",
+            "Indoor fallback: bars in Köpenick or the city centre"
+          ],
+          "contact": {
+            "website": "https://www.fc-union-berlin.de/en/",
+            "booking": "https://tickets.union-zeughaus.de",
+            "phone": "+49 30 65 66 88 100",
+            "email": "verein@fc-union-berlin.de"
+          },
+          "source": "https://www.fc-union-berlin.de/en/"
+        },
+        {
+          "rank": 3,
+          "name": "Olympiastadion Berlin, Westend",
+          "summary": "Berlin's largest stadium and home of Hertha BSC.",
+          "address": "Olympischer Platz 3, 14053 Berlin",
+          "price": {
+            "amount": 0,
+            "currency": "EUR",
+            "basis": "area is free to visit; event tickets priced separately"
+          },
+          "facts": [
+            "73,779 seats",
+            "Accessibility page available",
+            "Outdoor stadium"
+          ],
+          "why": [
+            "No event listed for 5 Dec 2026, works only if one is announced",
+            "Indoor fallback: bar base in Charlottenburg"
+          ],
+          "contact": {
+            "website": "https://www.olympiastadion.berlin/en/",
+            "booking": "https://olympiastadion.berlin/en/dates-and-tickets/",
+            "phone": "+49 30 306 88 100",
+            "email": "info@olympiastadion.berlin"
+          },
+          "source": "https://www.olympiastadion.berlin/en/"
+        }
+      ]
+    },
+    {
+      "id": "live-event",
+      "category": "live-event",
+      "title": "Saturday evening show",
+      "date": "2026-12-05",
+      "start": "19:30",
+      "end": "23:00",
+      "end_date": null,
+      "note": "Concert or football match on Saturday 5 December.",
+      "candidates": [
+        {
+          "rank": 1,
+          "name": "SDP & The Capital Dance Orchestra",
+          "summary": "Party-style arena concert at Uber Arena.",
+          "address": "Uber Arena, Uber-Platz 1, 10243 Berlin",
+          "price": {
+            "amount": 639.2,
+            "currency": "EUR",
+            "basis": "8 tickets at 79.90 (lowest listed 'from' price)"
+          },
+          "facts": [
+            "Sat 5 Dec 2026, 19:30",
+            "Close to Ostbahnhof"
+          ],
+          "why": [
+            "Right evening, tickets on sale",
+            "Same hub as the hotels"
+          ],
+          "contact": {
+            "website": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930",
+            "booking": "https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930"
+          },
+          "source": "https://www.uber-arena.de/en/events/"
+        },
+        {
+          "rank": 2,
+          "name": "1. FC Union Berlin v Hamburger SV (Bundesliga)",
+          "summary": "Bundesliga home match at Stadion An der Alten Försterei.",
+          "address": "Stadion An der Alten Försterei, An der Wuhlheide 263, 12555 Berlin",
+          "price": {
+            "amount": 1176,
+            "currency": "EUR",
+            "basis": "8 tickets at 147 (lowest resale listing, not face value)"
+          },
+          "facts": [
+            "Sat 5 Dec 2026, kick-off to be confirmed",
+            "Resale price estimate"
+          ],
+          "why": [
+            "Classic football night out",
+            "Official tickets are often member-priority, availability uncertain"
+          ],
+          "contact": {
+            "website": "https://ticket-compare.com/football/bundesliga/union-berlin-vs-hamburger-sv-stadion-an-der-alten-forsterei-tickets-1223115/",
+            "booking": "https://fc-union-berlin.de/en"
+          },
+          "source": "https://ticket-compare.com/fixtures/union-berlin-vs-hamburger-sv-tickets/"
+        },
+        {
+          "rank": 3,
+          "name": "Konzerthaus Berlin, Großer Saal concert",
+          "summary": "Concert in the Großer Saal at Gendarmenmarkt.",
+          "address": "Gendarmenmarkt 2, 10117 Berlin",
+          "price": {
+            "amount": 204,
+            "currency": "EUR",
+            "basis": "8 tickets at 25.50"
+          },
+          "facts": [
+            "Sat 5 Dec 2026, start time not listed",
+            "Classical style"
+          ],
+          "why": [
+            "Central location and lowest price",
+            "Weaker fit for a bachelor party, confirm programme first"
+          ],
+          "contact": {
+            "website": "https://www.konzerthaus.de",
+            "booking": "https://songkick.com/concerts/43256656-konzerthaus-berlin-at-grosser-saal-konzerthaus-berlin"
+          },
+          "source": "https://songkick.com/concerts/43256656-konzerthaus-berlin-at-grosser-saal-konzerthaus-berlin"
+        }
+      ]
+    }
+  ],
+  "weather": {
+    "method": "climate",
+    "days": [
+      {
+        "date": "2026-12-04",
+        "min_c": -0.5,
+        "max_c": 2.6,
+        "rain": "1 of 5 years",
+        "wind_kmh": 29.9
+      },
+      {
+        "date": "2026-12-05",
+        "min_c": 0.3,
+        "max_c": 2.6,
+        "rain": "3 of 5 years",
+        "wind_kmh": 29.8
+      },
+      {
+        "date": "2026-12-06",
+        "min_c": 0.2,
+        "max_c": 3.4,
+        "rain": "3 of 5 years",
+        "wind_kmh": 28.5
+      }
+    ],
+    "advice": "Expect cold, damp days around 0 to 4 °C; use covered transport and prefer the indoor concert if the weather turns."
+  },
+  "notes": [
+    "Arrive Friday 4 Dec and set up; depart Sunday 6 Dec. Flights Warsaw-Berlin are excluded from the budget.",
+    "Airport transfer: Airport Express or S-Bahn with an ABC ticket (about 5 EUR per person each way); local transport for the group is estimated at about 130 EUR.",
+    "SDP also plays Uber Arena on Fri 4 Dec and Eisbären play there on Sun 6 Dec, so expect busy trains and hotels around Ostbahnhof.",
+    "Christmas markets are open in this period, which may raise hotel prices.",
+    "Leave at least 3 hours before the return flight on Sunday.",
+    "Nothing is booked; use the contacts on each option to book yourself."
+  ],
+  "open_issues": [
+    "Union v HSV kick-off is 15:30 on a suggested date per the club site (afternoon, not the Saturday evening you asked for).",
+    "The Union price is a resale estimate from a third-party page, not face value.",
+    "The SDP price is a 'from' price, so the real group total can be higher.",
+    "Hotel rates are indicative figures from other dates; check live rates for 4-6 Dec 2026 and confirm twin rooms.",
+    "Hampton phone and e-mail and Goldmarie phone are unconfirmed.",
+    "Weather is climatology only; re-check the forecast from about 18 Nov 2026.",
+    "Ticketmaster data was unavailable (API key rejected); options come from web sources.",
+    "Konzerthaus programme and start time are not published; confirm before choosing.",
+    "Some street addresses and the Union stadium capacity come from general knowledge; verify when enquiring."
+  ],
+  "sources": [
+    {
+      "title": "Uber Arena",
+      "url": "https://www.uber-arena.de"
+    },
+    {
+      "title": "Uber Arena events",
+      "url": "https://www.uber-arena.de/en/events/"
+    },
+    {
+      "title": "FC Union Berlin",
+      "url": "https://www.fc-union-berlin.de/en/"
+    },
+    {
+      "title": "Olympiastadion Berlin",
+      "url": "https://www.olympiastadion.berlin/en/"
+    },
+    {
+      "title": "Ticket-Compare Union v HSV",
+      "url": "https://ticket-compare.com/fixtures/union-berlin-vs-hamburger-sv-tickets/"
+    },
+    {
+      "title": "Songkick Konzerthaus listing",
+      "url": "https://songkick.com/concerts/43256656-konzerthaus-berlin-at-grosser-saal-konzerthaus-berlin"
+    },
+    {
+      "title": "Hotel Indigo on Berlin.de",
+      "url": "https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html"
+    },
+    {
+      "title": "Hampton by Hilton on Berlin.de",
+      "url": "https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html"
+    },
+    {
+      "title": "Hotel Goldmarie on HRS",
+      "url": "https://www.hrs.com/en/hotel/565310"
+    },
+    {
+      "title": "BVG",
+      "url": "https://www.bvg.de/en"
+    },
+    {
+      "title": "Open-Meteo Historical Weather API",
+      "url": "https://open-meteo.com/en/docs/historical-weather-api"
+    }
+  ]
+}

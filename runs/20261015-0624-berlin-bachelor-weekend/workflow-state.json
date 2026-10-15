@@ -1,0 +1,407 @@
+{
+  "run_id": "20261015-0624-berlin-bachelor-weekend",
+  "created_at": "2026-10-15T04:24:14+00:00",
+  "updated_at": "2026-10-15T04:43:59+00:00",
+  "meta": {
+    "country_code": "DE",
+    "currency": "EUR",
+    "timezone": "Europe/Berlin",
+    "budget_limit": "3500",
+    "guests": "8"
+  },
+  "steps": {
+    "requirements": {
+      "owner": "requirements-formalizer",
+      "artifact": "artifacts/requirements.md",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "0fb5b14b92af681c221c2da56925b679d15c5fb38a4c71dd8df2aae85950091c",
+      "notes": [],
+      "last_written_at": "2026-10-15T04:25:33+00:00",
+      "last_written_by": "requirements-formalizer"
+    },
+    "venue": {
+      "owner": "venue-planner",
+      "artifact": "artifacts/venue.md",
+      "status": "done",
+      "retries": 1,
+      "enabled": true,
+      "sha256": "ff9d6572826dd892cec990aa01013a131d0a19fe687286fbe7bfbfd601d51233",
+      "notes": [
+        "G7: option #3 Olympiastadion Book URL tickets.olympiastadion.berlin loads only 'Online-Shop' with no mention of the stadium — give a Book link whose page names the stadium (e.g. its contact or official ticket page), verified with WebFetch. Also align the Union kick-off with live-events (TBD / unconfirmed, not a firm 15:30)."
+      ]
+    },
+    "live-events": {
+      "owner": "live-events-scout",
+      "artifact": "artifacts/live-events.md",
+      "status": "done",
+      "retries": 1,
+      "enabled": true,
+      "sha256": "1c3c2524ed5655181c3d71850545a81b1088d4bdf39de9681a5b26feec6d744e",
+      "notes": [
+        "G7: option #2 Union Berlin v Hamburger SV — Website (fixtures page) does not mention Hamburger SV or 5 Dec 2026; link a page that names the match (e.g. the official ticket shop match page or another verifiable fixture page), verified with WebFetch. Also use the current Uber Arena address Uber-Platz 1 (formerly Mercedes-Platz 1) to match the venue shortlist."
+      ]
+    },
+    "weather": {
+      "owner": "weather-planner",
+      "artifact": "artifacts/weather.md",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "87bb133be8caa4490acd8cfb48daa42ab27f3171df252c6125eb806d71b87142",
+      "notes": [],
+      "last_written_at": "2026-10-15T04:26:41+00:00",
+      "last_written_by": "weather-planner"
+    },
+    "catering": {
+      "owner": "catering-planner",
+      "artifact": "artifacts/catering.md",
+      "status": "skipped",
+      "retries": 0,
+      "enabled": false,
+      "sha256": null,
+      "notes": [
+        "user: drop the dinner from the plan"
+      ]
+    },
+    "logistics": {
+      "owner": "logistics-planner",
+      "artifact": "artifacts/logistics.md",
+      "status": "done",
+      "retries": 1,
+      "enabled": true,
+      "sha256": "361363b0833cec79cc68d6f2c3f00325bfde06ae99b95f60afb10686559d24d4",
+      "notes": [
+        "G7: hotel website links unreachable — Hotel Indigo IHG site 403 and Booking.com empty; Hampton Hilton site 403; Hotel Goldmarie hotels.com timed out twice. Supply website and booking links that load without bot blocking (e.g. the hotel's own domain or a reachable booking page), verified with WebFetch.",
+        "regenerate: upstream 'venue' changed (G7: option #3 Olympiastadion Book URL tickets.olympiastadion.berlin loads only 'Online-Shop' with no mention of the stadium — give a Book link whose page names the stadium (e.g. its contact or official ticket page), verified with WebFetch. Also align the Union kick-off with live-events (TBD / unconfirmed, not a firm 15:30).)"
+      ]
+    },
+    "budget": {
+      "owner": "budget-aggregator",
+      "artifact": "artifacts/budget.md",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "26a0d08543f75412c6ac6ffc3e5030386ad3bf25cb056abeed53f898249fbec3",
+      "notes": [
+        "regenerate: upstream 'logistics' changed (G7: hotel website links unreachable — Hotel Indigo IHG site 403 and Booking.com empty; Hampton Hilton site 403; Hotel Goldmarie hotels.com timed out twice. Supply website and booking links that load without bot blocking (e.g. the hotel's own domain or a reachable booking page), verified with WebFetch.)",
+        "regenerate: upstream 'venue' changed (G7: option #3 Olympiastadion Book URL tickets.olympiastadion.berlin loads only 'Online-Shop' with no mention of the stadium — give a Book link whose page names the stadium (e.g. its contact or official ticket page), verified with WebFetch. Also align the Union kick-off with live-events (TBD / unconfirmed, not a firm 15:30).)"
+      ],
+      "last_written_at": "2026-10-15T04:39:09+00:00",
+      "last_written_by": "budget-aggregator"
+    },
+    "validation": {
+      "owner": "validator",
+      "artifact": "artifacts/validation.md",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "0421a43db78557fea4d746917d844fb716fa490db02ff0f2b739d5596fb1d2ac",
+      "notes": [
+        "regenerate: upstream 'logistics' changed (G7: hotel website links unreachable — Hotel Indigo IHG site 403 and Booking.com empty; Hampton Hilton site 403; Hotel Goldmarie hotels.com timed out twice. Supply website and booking links that load without bot blocking (e.g. the hotel's own domain or a reachable booking page), verified with WebFetch.)",
+        "regenerate: upstream 'venue' changed (G7: option #3 Olympiastadion Book URL tickets.olympiastadion.berlin loads only 'Online-Shop' with no mention of the stadium — give a Book link whose page names the stadium (e.g. its contact or official ticket page), verified with WebFetch. Also align the Union kick-off with live-events (TBD / unconfirmed, not a firm 15:30).)"
+      ],
+      "last_written_at": "2026-10-15T04:39:59+00:00",
+      "last_written_by": "validator"
+    },
+    "schedule": {
+      "owner": "schedule-builder",
+      "artifact": "artifacts/schedule.md",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "b10b828d66a9a59006a4c170533cf232198ee2d2c9e1b5b07ffb335e1d18c355",
+      "notes": []
+    },
+    "approval": {
+      "owner": "human",
+      "artifact": "approval.json",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "c46919598b285965c9ce058470b29b307c6d8c7589ca36e21c1134e012ada08f",
+      "notes": []
+    },
+    "ics": {
+      "owner": "ics-builder",
+      "artifact": "output/calendar/program.ics",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "2198db693fe396c034f4cc46aa0f0c5e8e0a97a0a2e2bb785e42cd4235fe83fd",
+      "notes": []
+    },
+    "html": {
+      "owner": "html-builder",
+      "artifact": "output/event-plan.html",
+      "status": "done",
+      "retries": 0,
+      "enabled": true,
+      "sha256": "a3991221a118846d0b781d2d36e49dea0f8b0a75ba34c0861c61b70bb544450c",
+      "notes": []
+    }
+  },
+  "history": [
+    {
+      "at": "2026-10-15T04:24:14+00:00",
+      "event": "run created"
+    },
+    {
+      "at": "2026-10-15T04:24:14+00:00",
+      "event": "requirements -> running"
+    },
+    {
+      "at": "2026-10-15T04:24:32+00:00",
+      "event": "artifacts/requirements.md written by requirements-formalizer"
+    },
+    {
+      "at": "2026-10-15T04:25:33+00:00",
+      "event": "artifacts/requirements.md written by requirements-formalizer"
+    },
+    {
+      "at": "2026-10-15T04:25:50+00:00",
+      "event": "meta country_code=DE"
+    },
+    {
+      "at": "2026-10-15T04:25:50+00:00",
+      "event": "meta currency=EUR"
+    },
+    {
+      "at": "2026-10-15T04:25:50+00:00",
+      "event": "meta timezone=Europe/Berlin"
+    },
+    {
+      "at": "2026-10-15T04:25:50+00:00",
+      "event": "meta budget_limit=3500"
+    },
+    {
+      "at": "2026-10-15T04:25:50+00:00",
+      "event": "meta guests=8"
+    },
+    {
+      "at": "2026-10-15T04:25:50+00:00",
+      "event": "requirements -> done"
+    },
+    {
+      "at": "2026-10-15T04:25:50+00:00",
+      "event": "plan: optional steps enabled = ['catering', 'live-events', 'logistics', 'weather']"
+    },
+    {
+      "at": "2026-10-15T04:25:53+00:00",
+      "event": "venue -> running"
+    },
+    {
+      "at": "2026-10-15T04:25:53+00:00",
+      "event": "live-events -> running"
+    },
+    {
+      "at": "2026-10-15T04:25:53+00:00",
+      "event": "weather -> running"
+    },
+    {
+      "at": "2026-10-15T04:26:36+00:00",
+      "event": "artifacts/weather.md written by weather-planner"
+    },
+    {
+      "at": "2026-10-15T04:26:41+00:00",
+      "event": "artifacts/weather.md written by weather-planner"
+    },
+    {
+      "at": "2026-10-15T04:26:41+00:00",
+      "event": "artifacts/weather.md written by weather-planner"
+    },
+    {
+      "at": "2026-10-15T04:26:50+00:00",
+      "event": "weather -> done"
+    },
+    {
+      "at": "2026-10-15T04:26:59+00:00",
+      "event": "live-events -> done"
+    },
+    {
+      "at": "2026-10-15T04:27:19+00:00",
+      "event": "venue -> done"
+    },
+    {
+      "at": "2026-10-15T04:27:21+00:00",
+      "event": "catering -> running"
+    },
+    {
+      "at": "2026-10-15T04:27:21+00:00",
+      "event": "logistics -> running"
+    },
+    {
+      "at": "2026-10-15T04:28:51+00:00",
+      "event": "logistics -> done"
+    },
+    {
+      "at": "2026-10-15T04:30:59+00:00",
+      "event": "plan: optional steps enabled = ['live-events', 'logistics', 'weather']"
+    },
+    {
+      "at": "2026-10-15T04:30:59+00:00",
+      "event": "catering -> skipped (user: drop the dinner from the plan)"
+    },
+    {
+      "at": "2026-10-15T04:31:01+00:00",
+      "event": "budget -> running"
+    },
+    {
+      "at": "2026-10-15T04:31:34+00:00",
+      "event": "artifacts/budget.md written by budget-aggregator"
+    },
+    {
+      "at": "2026-10-15T04:31:41+00:00",
+      "event": "budget -> done"
+    },
+    {
+      "at": "2026-10-15T04:31:41+00:00",
+      "event": "validation -> running"
+    },
+    {
+      "at": "2026-10-15T04:34:29+00:00",
+      "event": "logistics failed (retry 1/3): G7: hotel website links unreachable — Hotel Indigo IHG site 403 and Booking.com empty; Hampton Hilton site 403; Hotel Goldmarie hotels.com timed out twice. Supply website and booking links that load without bot blocking (e.g. the hotel's own domain or a reachable booking page), verified with WebFetch."
+    },
+    {
+      "at": "2026-10-15T04:34:29+00:00",
+      "event": "budget invalidated because logistics changed"
+    },
+    {
+      "at": "2026-10-15T04:34:29+00:00",
+      "event": "validation invalidated because logistics changed"
+    },
+    {
+      "at": "2026-10-15T04:34:29+00:00",
+      "event": "validation invalidated (manual)"
+    },
+    {
+      "at": "2026-10-15T04:34:31+00:00",
+      "event": "logistics -> running"
+    },
+    {
+      "at": "2026-10-15T04:35:26+00:00",
+      "event": "logistics -> done"
+    },
+    {
+      "at": "2026-10-15T04:35:28+00:00",
+      "event": "budget -> running"
+    },
+    {
+      "at": "2026-10-15T04:35:55+00:00",
+      "event": "artifacts/budget.md written by budget-aggregator"
+    },
+    {
+      "at": "2026-10-15T04:36:02+00:00",
+      "event": "budget -> done"
+    },
+    {
+      "at": "2026-10-15T04:36:02+00:00",
+      "event": "validation -> running"
+    },
+    {
+      "at": "2026-10-15T04:36:53+00:00",
+      "event": "artifacts/validation.md written by validator"
+    },
+    {
+      "at": "2026-10-15T04:37:11+00:00",
+      "event": "venue failed (retry 1/3): G7: option #3 Olympiastadion Book URL tickets.olympiastadion.berlin loads only 'Online-Shop' with no mention of the stadium — give a Book link whose page names the stadium (e.g. its contact or official ticket page), verified with WebFetch. Also align the Union kick-off with live-events (TBD / unconfirmed, not a firm 15:30)."
+    },
+    {
+      "at": "2026-10-15T04:37:11+00:00",
+      "event": "budget invalidated because venue changed"
+    },
+    {
+      "at": "2026-10-15T04:37:11+00:00",
+      "event": "logistics invalidated because venue changed"
+    },
+    {
+      "at": "2026-10-15T04:37:11+00:00",
+      "event": "validation invalidated because venue changed"
+    },
+    {
+      "at": "2026-10-15T04:37:11+00:00",
+      "event": "live-events failed (retry 1/3): G7: option #2 Union Berlin v Hamburger SV — Website (fixtures page) does not mention Hamburger SV or 5 Dec 2026; link a page that names the match (e.g. the official ticket shop match page or another verifiable fixture page), verified with WebFetch. Also use the current Uber Arena address Uber-Platz 1 (formerly Mercedes-Platz 1) to match the venue shortlist."
+    },
+    {
+      "at": "2026-10-15T04:37:11+00:00",
+      "event": "validation invalidated (manual)"
+    },
+    {
+      "at": "2026-10-15T04:37:15+00:00",
+      "event": "venue -> running"
+    },
+    {
+      "at": "2026-10-15T04:37:15+00:00",
+      "event": "live-events -> running"
+    },
+    {
+      "at": "2026-10-15T04:37:47+00:00",
+      "event": "venue -> done"
+    },
+    {
+      "at": "2026-10-15T04:38:10+00:00",
+      "event": "live-events -> done"
+    },
+    {
+      "at": "2026-10-15T04:38:14+00:00",
+      "event": "logistics -> running"
+    },
+    {
+      "at": "2026-10-15T04:38:34+00:00",
+      "event": "logistics -> done"
+    },
+    {
+      "at": "2026-10-15T04:38:43+00:00",
+      "event": "budget -> running"
+    },
+    {
+      "at": "2026-10-15T04:39:09+00:00",
+      "event": "artifacts/budget.md written by budget-aggregator"
+    },
+    {
+      "at": "2026-10-15T04:39:15+00:00",
+      "event": "budget -> done"
+    },
+    {
+      "at": "2026-10-15T04:39:15+00:00",
+      "event": "validation -> running"
+    },
+    {
+      "at": "2026-10-15T04:39:59+00:00",
+      "event": "artifacts/validation.md written by validator"
+    },
+    {
+      "at": "2026-10-15T04:40:13+00:00",
+      "event": "validation -> done"
+    },
+    {
+      "at": "2026-10-15T04:40:20+00:00",
+      "event": "schedule -> running"
+    },
+    {
+      "at": "2026-10-15T04:41:07+00:00",
+      "event": "schedule -> done"
+    },
+    {
+      "at": "2026-10-15T04:43:24+00:00",
+      "event": "approval -> done"
+    },
+    {
+      "at": "2026-10-15T04:43:28+00:00",
+      "event": "ics -> running"
+    },
+    {
+      "at": "2026-10-15T04:43:45+00:00",
+      "event": "ics -> done"
+    },
+    {
+      "at": "2026-10-15T04:43:45+00:00",
+      "event": "html -> running"
+    },
+    {
+      "at": "2026-10-15T04:43:59+00:00",
+      "event": "html -> done"
+    }
+  ]
+}

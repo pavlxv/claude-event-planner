@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:e4c010ebfe5809890d60@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261204T140000Z
+DTEND:20261206T110000Z
+SUMMARY:Hotel\, 2 nights (4 rooms\, 2 guests each) (to choose)
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DESCRIPTION:Not booked yet. Choose one option and book it directly:\n1. Hot
+ el Indigo Berlin - East Side Gallery — 960.00 EUR (Website: https://www.
+ berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.htm
+ l\; Book: https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin
+ -east-side-gallery.html)\n2. Hampton by Hilton Berlin City East Side Galle
+ ry — 920.00 EUR (Website: https://www.berlin.de/hotels/8909160-1686962-h
+ ampton-by-hilton-berlin-city-east-side-.html\; Book: https://www.berlin.de
+ /hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html\; Ph
+ one: +49 30 29381380\; E-mail: info@hamptonberlin-eastsidegallery.de)\n3. 
+ Hotel Goldmarie — 880.00 EUR (Website: https://www.hrs.com/en/hotel/5653
+ 10\; Book: https://www.hrs.com/en/hotel/565310)
+END:VEVENT
+BEGIN:VEVENT
+UID:4a5cc4525b3ab81c4921@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T160000Z
+DTEND:20261205T223000Z
+SUMMARY:Saturday evening hub (to choose)
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DESCRIPTION:Not booked yet. Choose one option and book it directly:\n1. Ube
+ r Platz (Uber Arena and Uber Eats Music Hall district)\, Friedrichshain 
+ — 0.00 EUR (Website: https://www.uber-platz.de\; Book: https://www.uber-
+ platz.de/kontakt\; Phone: +49 1806 570070)\n2. Stadion An der Alten Först
+ erei (Union Berlin)\, Köpenick — 0.00 EUR (Website: https://www.fc-unio
+ n-berlin.de/en/\; Book: https://tickets.union-zeughaus.de\; Phone: +49 30 
+ 65 66 88 100\; E-mail: verein@fc-union-berlin.de)\n3. Olympiastadion Berli
+ n\, Westend — 0.00 EUR (Website: https://www.olympiastadion.berlin/en/\;
+  Book: https://olympiastadion.berlin/en/dates-and-tickets/\; Phone: +49 30
+  306 88 100\; E-mail: info@olympiastadion.berlin)
+END:VEVENT
+BEGIN:VEVENT
+UID:77ea7df1aabd4139d1ab@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T183000Z
+DTEND:20261205T220000Z
+SUMMARY:Saturday evening show (to choose)
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DESCRIPTION:Not booked yet. Choose one option and book it directly:\n1. SDP
+  & The Capital Dance Orchestra — 639.20 EUR (Website: https://www.uber-a
+ rena.de/en/events/detail/sdp-orchestra/2026-12-05-1930\; Book: https://www
+ .uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930)\n2. 1. FC U
+ nion Berlin v Hamburger SV (Bundesliga) — 1176.00 EUR (Website: https://
+ ticket-compare.com/football/bundesliga/union-berlin-vs-hamburger-sv-stadio
+ n-an-der-alten-forsterei-tickets-1223115/\; Book: https://fc-union-berlin.
+ de/en)\n3. Konzerthaus Berlin\, Großer Saal concert — 204.00 EUR (Websi
+ te: https://www.konzerthaus.de\; Book: https://songkick.com/concerts/43256
+ 656-konzerthaus-berlin-at-grosser-saal-konzerthaus-berlin)
+END:VEVENT
+END:VCALENDAR

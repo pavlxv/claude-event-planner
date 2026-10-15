@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Bachelor weekend in Berlin — shortlist</title>
+<style>
+  :root {
+    --paper: #F4F6F9;
+    --surface: #FFFFFF;
+    --ink: #18202D;
+    --muted: #5E6979;
+    --line: #D8DEE6;
+    --cobalt: #2C57F5;
+    --cobalt-ink: #FFFFFF;
+    --marigold: #FFC94D;
+    --marigold-ink: #2A2100;
+    --good: #1B7F4B;
+    --warn: #B4451F;
+    --display: "Avenir Next Condensed", "Roboto Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --text: ui-sans-serif, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --r-ticket: 14px;
+    --r-small: 6px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #11151C; --surface: #1A2029; --ink: #E8ECF2; --muted: #9AA5B4;
+      --line: #2C3441; --cobalt: #7D9BFF; --cobalt-ink: #0D1530;
+      --good: #5FD39A; --warn: #FF9A73;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font: 16px/1.55 var(--text); }
+  a { color: var(--cobalt); text-underline-offset: 3px; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* ---------- hero */
+  .hero { padding: 64px 0 40px; }
+  .hero .occasion { color: var(--muted); font-size: 17px; margin: 0 0 8px; }
+  .hero h1 { font: 700 clamp(44px, 9vw, 96px)/0.92 var(--display); letter-spacing: -0.02em;
+             margin: 0 0 28px; max-width: 14ch; }
+  .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0;
+           border-top: 2px solid var(--ink); margin: 0; }
+  .facts div { padding: 14px 16px 0 0; }
+  .facts dt { color: var(--muted); font-size: 14px; }
+  .facts dd { margin: 2px 0 0; font: 600 20px/1.25 var(--text); }
+  .lede { max-width: 68ch; font-size: 18px; margin: 28px 0 0; }
+  .notice { display: inline-block; margin-top: 18px; padding: 8px 12px; border-radius: var(--r-small);
+            background: var(--surface); border: 1px solid var(--line); font-size: 15px; }
+
+  /* ---------- run of show */
+  .runofshow { margin: 8px 0 0; padding: 0; list-style: none; display: flex; gap: 8px;
+               overflow-x: auto; padding-bottom: 6px; }
+  .runofshow li { flex: 0 0 auto; }
+  .runofshow a { display: block; text-decoration: none; color: var(--ink); background: var(--surface);
+                 border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 15px; }
+  .runofshow a:hover { border-color: var(--ink); }
+  .runofshow time { font-weight: 700; margin-right: 8px; }
+
+  /* ---------- slots */
+  .slot { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 28px;
+          padding: 48px 0; border-top: 1px solid var(--line); }
+  .slot-head { position: sticky; top: 16px; align-self: start; }
+  .slot-when { font: 700 34px/1 var(--display); letter-spacing: -0.01em; margin: 0; }
+  .slot-day { color: var(--muted); margin: 6px 0 14px; font-size: 15px; }
+  .slot-head h2 { font: 700 22px/1.2 var(--text); margin: 0 0 6px; }
+  .slot-note { color: var(--muted); font-size: 15px; margin: 0; }
+  .tickets { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+
+  /* the ticket: one memorable element — a stub you tear off to book */
+  .ticket { display: flex; flex-direction: column; background: var(--surface);
+            border: 1px solid var(--line); border-radius: var(--r-ticket); }
+  .ticket-body { padding: 18px 18px 16px; flex: 1; }
+  .rank { font-size: 14px; color: var(--muted); margin: 0 0 6px; }
+  .ticket.top .rank { color: var(--marigold-ink); background: var(--marigold); display: inline-block;
+                      padding: 2px 9px; border-radius: 999px; font-weight: 600; }
+  .ticket h3 { font: 700 24px/1.1 var(--display); margin: 0 0 8px; }
+  .ticket h3 a { color: inherit; text-decoration: none; }
+  .ticket h3 a:hover { text-decoration: underline; }
+  .ticket .summary { margin: 0 0 12px; }
+  .ticket .address { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+  .ticket ul { margin: 0 0 12px; padding-left: 18px; font-size: 15px; }
+  .ticket ul li { margin: 2px 0; }
+  .why { font-size: 15px; margin: 0 0 4px; font-weight: 600; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 15px; margin: 0; padding: 0; list-style: none; }
+  .stub { position: relative; border-top: 2px dashed var(--line); padding: 14px 18px;
+          display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 12px;
+          border-radius: 0 0 var(--r-ticket) var(--r-ticket); }
+  .stub::before, .stub::after { content: ""; position: absolute; top: -11px; width: 20px; height: 20px;
+          border-radius: 50%; background: var(--paper); border: 1px solid var(--line); }
+  .stub::before { left: -11px; clip-path: inset(0 0 0 50%); }
+  .stub::after { right: -11px; clip-path: inset(0 50% 0 0); }
+  .ticket.top .stub { background: var(--marigold); color: var(--marigold-ink); border-top-color: rgba(0,0,0,.25); }
+  .price { font: 700 22px/1.1 var(--display); white-space: nowrap; }
+  .price small { display: block; font: 400 13px/1.3 var(--text); opacity: .8; white-space: normal; }
+  .btn { display: inline-block; text-decoration: none; font: 600 14px/1 var(--text); padding: 11px 14px;
+         border-radius: var(--r-small); background: var(--cobalt); color: var(--cobalt-ink); white-space: nowrap; }
+  .ticket.top .btn { background: var(--ink); color: var(--paper); }
+  @media (prefers-color-scheme: dark) { .ticket.top .btn { background: #18202D; color: #fff; } }
+  .shortlist-note { color: var(--muted); font-size: 15px; margin: 0 0 14px; }
+
+  /* ---------- weather, budget, notes */
+  .band { padding: 48px 0; border-top: 1px solid var(--line); }
+  .band h2 { font: 700 34px/1 var(--display); margin: 0 0 20px; }
+  .days { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .day { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-small); padding: 14px; }
+  .day b { display: block; }
+  .day .t { display: block; font: 700 26px/1.1 var(--display); margin: 6px 0; }
+  .muted { color: var(--muted); font-size: 15px; }
+
+  .meter { position: relative; height: 14px; border-radius: 999px; background: var(--line); margin: 34px 0 44px; }
+  .meter .fill { position: absolute; inset: 0 auto 0 0; border-radius: 999px; background: var(--cobalt); }
+  .meter .fill.over { background: var(--warn); }
+  .meter .mark { position: absolute; top: -24px; transform: translateX(-50%); font-size: 13px; white-space: nowrap; }
+  .meter .mark::after { content: ""; position: absolute; left: 50%; top: 20px; width: 2px; height: 22px; background: var(--ink); }
+  .meter .limit { position: absolute; top: 22px; right: 0; font-size: 13px; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.total td { font-weight: 700; border-top: 2px solid var(--ink); border-bottom: 0; }
+  .table-wrap { overflow-x: auto; }
+  .verdict { font-weight: 600; margin: 0 0 6px; }
+  .verdict.ok { color: var(--good); } .verdict.over { color: var(--warn); }
+
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+  .cols h3 { font: 700 20px/1.2 var(--text); margin: 0 0 8px; }
+  .cols ul { margin: 0; padding-left: 18px; }
+  .sources { font-size: 14px; padding-left: 20px; columns: 2 320px; column-gap: 32px; }
+  .sources li { break-inside: avoid; margin-bottom: 4px; }
+  footer { padding: 32px 0 64px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 760px) {
+    .hero { padding-top: 40px; }
+    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .slot { grid-template-columns: 1fr; gap: 16px; padding: 36px 0; }
+    .slot-head { position: static; }
+  }
+  @media print {
+    body { background: #fff; } .btn, .runofshow { display: none; }
+    .slot, .ticket { break-inside: avoid; } .slot-head { position: static; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+<main>
+
+<header class="hero wrap" id="overview" data-section="overview">
+  <p class="occasion">Bachelor weekend</p>
+  <h1>Bachelor weekend in Berlin</h1>
+  <dl class="facts">
+    <div><dt>When</dt><dd>4–6 Dec 2026</dd></div>
+    <div><dt>Where</dt><dd>Berlin, Germany</dd></div>
+    <div><dt>Guests</dt><dd class="num">8</dd></div>
+    <div><dt>Budget</dt><dd class="num">3 500 EUR</dd></div>
+  </dl>
+  <p class="lede">A bachelor weekend in Berlin for 8 friends flying in from Warsaw, Friday 4 to Sunday 6 December 2026. The plan shortlists a Saturday-evening hub, a concert or football match and a hotel near the action. Dinner was dropped from the plan.</p>
+  <p class="notice">Nothing is booked yet. Each part of the event has up to three options — contact the one you like to reserve it.</p>
+</header>
+
+<nav class="wrap" id="program" data-section="program" aria-label="Program">
+  <ol class="runofshow">
+    <li><a href="#slot-accommodation"><time class="num">Fri 15:00</time>Hotel, 2 nights (4 rooms, 2 guests each)</a></li>
+
+    <li><a href="#slot-venue"><time class="num">Sat 17:00</time>Saturday evening hub</a></li>
+
+    <li><a href="#slot-live-event"><time class="num">Sat 19:30</time>Saturday evening show</a></li>
+
+  </ol>
+</nav>
+
+<div class="wrap" id="shortlists" data-section="shortlists">
+<section class="slot" id="slot-accommodation" data-slot="accommodation">
+  <div class="slot-head">
+    <p class="slot-when num">15:00–12:00</p>
+    <p class="slot-day">Fri 4 Dec 2026 to Sun 6 Dec 2026</p>
+    <h2>Hotel, 2 nights (4 rooms, 2 guests each)</h2>
+    <p class="slot-note">Friday check-in to Sunday check-out.</p>
+  </div>
+  <div>
+
+    <div class="tickets">
+      <article class="ticket top" data-option="accommodation-1">
+        <div class="ticket-body">
+          <p class="rank">Top pick</p>
+          <h3><a href="https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html" target="_blank" rel="noopener">Hotel Indigo Berlin - East Side Gallery</a></h3>
+          <p class="summary">Hotel on Uber Platz, 1-3 minutes on foot from Uber Arena.</p>
+          <p class="address">Mühlenstr. 13-19, 10243 Berlin</p>
+          <ul>
+            <li>Check-in from 15:00, check-out 12:00</li>
+            <li>Breakfast about 23 EUR per person extra</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>Right next to the arena</li>
+            <li>Confirm twin or 2-bed rooms</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html" target="_blank" rel="noopener">Book or enquire</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">960 EUR<small>4 rooms x 2 nights x 120 (indicative rate, no breakfast)</small></p>
+          <a class="btn" download="accommodation-1.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20Hotel%20Indigo%20Berlin%20-%20East%20Side%0D%0A%20%20Gallery%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A0d83c6e565e548452035%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261204T140000Z%0D%0ADTEND%3A20261206T110000Z%0D%0ASUMMARY%3AHotel%5C%2C%202%20nights%20%284%20rooms%5C%2C%202%20guests%20each%29%3A%20Hotel%20Indigo%20Berlin%20-%20E%0D%0A%20ast%20Side%20Gallery%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AM%C3%BChlenstr.%2013-19%5C%2C%2010243%20Berlin%0D%0ADESCRIPTION%3AOption%201%20for%3A%20Hotel%5C%2C%202%20nights%20%284%20rooms%5C%2C%202%20guests%20each%29%5CnHotel%0D%0A%20%20on%20Uber%20Platz%5C%2C%201-3%20minutes%20on%20foot%20from%20Uber%20Arena.%5CnPrice%3A%20960.00%20EUR%20%28%0D%0A%204%20rooms%20x%202%20nights%20x%20120%20%28indicative%20rate%5C%2C%20no%20breakfast%29%29%5CnNot%20booked%20yet%0D%0A%20%20%E2%80%94%20contact%20them%20to%20reserve.%5CnWebsite%3A%20https%3A%2F%2Fwww.berlin.de%2Fhotels%2F89173%0D%0A%2023-1686962-hotel-indigo-berlin-east-side-gallery.html%5CnBook%3A%20https%3A%2F%2Fwww.b%0D%0A%20erlin.de%2Fhotels%2F8917323-1686962-hotel-indigo-berlin-east-side-gallery.html%0D%0AURL%3Ahttps%3A%2F%2Fwww.berlin.de%2Fhotels%2F8917323-1686962-hotel-indigo-berlin-east-s%0D%0A%20ide-gallery.html%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+      <article class="ticket " data-option="accommodation-2">
+        <div class="ticket-body">
+          <p class="rank">Option 2</p>
+          <h3><a href="https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html" target="_blank" rel="noopener">Hampton by Hilton Berlin City East Side Gallery</a></h3>
+          <p class="summary">Hotel on Uber Platz, about 100 m from the East Side Gallery.</p>
+          <p class="address">Mildred-Harnack-Straße 15, 10243 Berlin</p>
+          <ul>
+            <li>Twin rooms with 2 single beds listed</li>
+            <li>Fully refundable rates offered</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>Same square as the arena, 2-5 minutes on foot</li>
+            <li>Suits friends sharing rooms</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html" target="_blank" rel="noopener">Book or enquire</a></li>
+            <li><a href="tel:+493029381380">+49 30 29381380</a></li>
+            <li><a href="mailto:info@hamptonberlin-eastsidegallery.de">info@hamptonberlin-eastsidegallery.de</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">920 EUR<small>4 rooms x 2 nights x 115 (indicative rate)</small></p>
+          <a class="btn" download="accommodation-2.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20Hampton%20by%20Hilton%20Berlin%20City%20E%0D%0A%20ast%20Side%20Gallery%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A22ebac4f1823be12351e%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261204T140000Z%0D%0ADTEND%3A20261206T110000Z%0D%0ASUMMARY%3AHotel%5C%2C%202%20nights%20%284%20rooms%5C%2C%202%20guests%20each%29%3A%20Hampton%20by%20Hilton%20Berli%0D%0A%20n%20City%20East%20Side%20Gallery%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AMildred-Harnack-Stra%C3%9Fe%2015%5C%2C%2010243%20Berlin%0D%0ADESCRIPTION%3AOption%202%20for%3A%20Hotel%5C%2C%202%20nights%20%284%20rooms%5C%2C%202%20guests%20each%29%5CnHotel%0D%0A%20%20on%20Uber%20Platz%5C%2C%20about%20100%20m%20from%20the%20East%20Side%20Gallery.%5CnPrice%3A%20920.00%20EU%0D%0A%20R%20%284%20rooms%20x%202%20nights%20x%20115%20%28indicative%20rate%29%29%5CnNot%20booked%20yet%20%E2%80%94%20contact%0D%0A%20%20them%20to%20reserve.%5CnWebsite%3A%20https%3A%2F%2Fwww.berlin.de%2Fhotels%2F8909160-1686962-h%0D%0A%20ampton-by-hilton-berlin-city-east-side-.html%5CnBook%3A%20https%3A%2F%2Fwww.berlin.de%2F%0D%0A%20hotels%2F8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html%5CnPhon%0D%0A%20e%3A%20%2B49%2030%2029381380%5CnE-mail%3A%20info%40hamptonberlin-eastsidegallery.de%0D%0AURL%3Ahttps%3A%2F%2Fwww.berlin.de%2Fhotels%2F8909160-1686962-hampton-by-hilton-berlin-c%0D%0A%20ity-east-side-.html%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+      <article class="ticket " data-option="accommodation-3">
+        <div class="ticket-body">
+          <p class="rank">Option 3</p>
+          <h3><a href="https://www.hrs.com/en/hotel/565310" target="_blank" rel="noopener">Hotel Goldmarie</a></h3>
+          <p class="summary">Hotel on Warschauer Straße, about 9 minutes on foot from Uber Arena.</p>
+          <p class="address">Warschauer Str. 58, 10243 Berlin</p>
+          <ul>
+            <li>Check-in from 14:00, check-out 11:00</li>
+            <li>Listed rate not freely cancellable</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>Cheapest of the three</li>
+            <li>Next to bars and Warschauer Straße station</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.hrs.com/en/hotel/565310" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://www.hrs.com/en/hotel/565310" target="_blank" rel="noopener">Book or enquire</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">880 EUR<small>4 rooms x 2 nights x 110 (indicative rate)</small></p>
+          <a class="btn" download="accommodation-3.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20Hotel%20Goldmarie%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A0d3e9412a3e3c60abb1a%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261204T140000Z%0D%0ADTEND%3A20261206T110000Z%0D%0ASUMMARY%3AHotel%5C%2C%202%20nights%20%284%20rooms%5C%2C%202%20guests%20each%29%3A%20Hotel%20Goldmarie%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AWarschauer%20Str.%2058%5C%2C%2010243%20Berlin%0D%0ADESCRIPTION%3AOption%203%20for%3A%20Hotel%5C%2C%202%20nights%20%284%20rooms%5C%2C%202%20guests%20each%29%5CnHotel%0D%0A%20%20on%20Warschauer%20Stra%C3%9Fe%5C%2C%20about%209%20minutes%20on%20foot%20from%20Uber%20Arena.%5CnPrice%3A%20%0D%0A%20880.00%20EUR%20%284%20rooms%20x%202%20nights%20x%20110%20%28indicative%20rate%29%29%5CnNot%20booked%20yet%20%0D%0A%20%E2%80%94%20contact%20them%20to%20reserve.%5CnWebsite%3A%20https%3A%2F%2Fwww.hrs.com%2Fen%2Fhotel%2F565310%0D%0A%20%5CnBook%3A%20https%3A%2F%2Fwww.hrs.com%2Fen%2Fhotel%2F565310%0D%0AURL%3Ahttps%3A%2F%2Fwww.hrs.com%2Fen%2Fhotel%2F565310%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="slot" id="slot-venue" data-slot="venue">
+  <div class="slot-head">
+    <p class="slot-when num">17:00–23:30</p>
+    <p class="slot-day">Sat 5 Dec 2026</p>
+    <h2>Saturday evening hub</h2>
+    <p class="slot-note">The area where the Saturday evening happens; tickets are priced under the show.</p>
+  </div>
+  <div>
+
+    <div class="tickets">
+      <article class="ticket top" data-option="venue-1">
+        <div class="ticket-body">
+          <p class="rank">Top pick</p>
+          <h3><a href="https://www.uber-platz.de" target="_blank" rel="noopener">Uber Platz (Uber Arena and Uber Eats Music Hall district), Friedrichshain</a></h3>
+          <p class="summary">Entertainment district with arena, music hall, bars, restaurants and two hotels on the square.</p>
+          <p class="address">Uber-Platz 1, 10243 Berlin</p>
+          <ul>
+            <li>Arena up to about 17,000 for concerts</li>
+            <li>Indoor venues, inclusion service page available</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>SDP concert listed here on 5 Dec 2026</li>
+            <li>Most compact base, no weather fallback needed</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.uber-platz.de" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://www.uber-platz.de/kontakt" target="_blank" rel="noopener">Book or enquire</a></li>
+            <li><a href="tel:+491806570070">+49 1806 570070</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">0 EUR<small>area is free to visit; event tickets priced separately</small></p>
+          <a class="btn" download="venue-1.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20Uber%20Platz%20%28Uber%20Arena%20and%20Uber%0D%0A%20%20Eats%20Music%20Hall%20district%29%5C%2C%20Friedrichshain%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A034f6bdf60bcfb58cecf%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T160000Z%0D%0ADTEND%3A20261205T223000Z%0D%0ASUMMARY%3ASaturday%20evening%20hub%3A%20Uber%20Platz%20%28Uber%20Arena%20and%20Uber%20Eats%20Music%20Ha%0D%0A%20ll%20district%29%5C%2C%20Friedrichshain%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AUber-Platz%201%5C%2C%2010243%20Berlin%0D%0ADESCRIPTION%3AOption%201%20for%3A%20Saturday%20evening%20hub%5CnEntertainment%20district%20with%0D%0A%20%20arena%5C%2C%20music%20hall%5C%2C%20bars%5C%2C%20restaurants%20and%20two%20hotels%20on%20the%20square.%5CnPr%0D%0A%20ice%3A%200.00%20EUR%20%28area%20is%20free%20to%20visit%5C%3B%20event%20tickets%20priced%20separately%29%5CnN%0D%0A%20ot%20booked%20yet%20%E2%80%94%20contact%20them%20to%20reserve.%5CnWebsite%3A%20https%3A%2F%2Fwww.uber-plat%0D%0A%20z.de%5CnBook%3A%20https%3A%2F%2Fwww.uber-platz.de%2Fkontakt%5CnPhone%3A%20%2B49%201806%20570070%0D%0AURL%3Ahttps%3A%2F%2Fwww.uber-platz.de%2Fkontakt%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+      <article class="ticket " data-option="venue-2">
+        <div class="ticket-body">
+          <p class="rank">Option 2</p>
+          <h3><a href="https://www.fc-union-berlin.de/en/" target="_blank" rel="noopener">Stadion An der Alten Försterei (Union Berlin), Köpenick</a></h3>
+          <p class="summary">Home ground of 1. FC Union Berlin, in Köpenick.</p>
+          <p class="address">An der Wuhlheide 263, 12555 Berlin</p>
+          <ul>
+            <li>About 22,000 capacity (not on the club page)</li>
+            <li>Partly outdoor</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>Club site lists Union v Hamburger SV on 5 Dec 2026</li>
+            <li>Indoor fallback: bars in Köpenick or the city centre</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.fc-union-berlin.de/en/" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://tickets.union-zeughaus.de" target="_blank" rel="noopener">Book or enquire</a></li>
+            <li><a href="tel:+4930656688100">+49 30 65 66 88 100</a></li>
+            <li><a href="mailto:verein@fc-union-berlin.de">verein@fc-union-berlin.de</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">0 EUR<small>area is free to visit; match tickets priced separately</small></p>
+          <a class="btn" download="venue-2.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20Stadion%20An%20der%20Alten%20F%C3%B6rsterei%0D%0A%20%20%28Union%20Berlin%29%5C%2C%20K%C3%B6penick%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A54852b55077fc1858f11%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T160000Z%0D%0ADTEND%3A20261205T223000Z%0D%0ASUMMARY%3ASaturday%20evening%20hub%3A%20Stadion%20An%20der%20Alten%20F%C3%B6rsterei%20%28Union%20Berlin%0D%0A%20%29%5C%2C%20K%C3%B6penick%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AAn%20der%20Wuhlheide%20263%5C%2C%2012555%20Berlin%0D%0ADESCRIPTION%3AOption%202%20for%3A%20Saturday%20evening%20hub%5CnHome%20ground%20of%201.%20FC%20Union%20%0D%0A%20Berlin%5C%2C%20in%20K%C3%B6penick.%5CnPrice%3A%200.00%20EUR%20%28area%20is%20free%20to%20visit%5C%3B%20match%20tic%0D%0A%20kets%20priced%20separately%29%5CnNot%20booked%20yet%20%E2%80%94%20contact%20them%20to%20reserve.%5CnWebs%0D%0A%20ite%3A%20https%3A%2F%2Fwww.fc-union-berlin.de%2Fen%2F%5CnBook%3A%20https%3A%2F%2Ftickets.union-zeugh%0D%0A%20aus.de%5CnPhone%3A%20%2B49%2030%2065%2066%2088%20100%5CnE-mail%3A%20verein%40fc-union-berlin.de%0D%0AURL%3Ahttps%3A%2F%2Ftickets.union-zeughaus.de%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+      <article class="ticket " data-option="venue-3">
+        <div class="ticket-body">
+          <p class="rank">Option 3</p>
+          <h3><a href="https://www.olympiastadion.berlin/en/" target="_blank" rel="noopener">Olympiastadion Berlin, Westend</a></h3>
+          <p class="summary">Berlin&#x27;s largest stadium and home of Hertha BSC.</p>
+          <p class="address">Olympischer Platz 3, 14053 Berlin</p>
+          <ul>
+            <li>73,779 seats</li>
+            <li>Accessibility page available</li>
+            <li>Outdoor stadium</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>No event listed for 5 Dec 2026, works only if one is announced</li>
+            <li>Indoor fallback: bar base in Charlottenburg</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.olympiastadion.berlin/en/" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://olympiastadion.berlin/en/dates-and-tickets/" target="_blank" rel="noopener">Book or enquire</a></li>
+            <li><a href="tel:+493030688100">+49 30 306 88 100</a></li>
+            <li><a href="mailto:info@olympiastadion.berlin">info@olympiastadion.berlin</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">0 EUR<small>area is free to visit; event tickets priced separately</small></p>
+          <a class="btn" download="venue-3.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20Olympiastadion%20Berlin%5C%2C%20Westend%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A017a731d87d58fbab0fa%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T160000Z%0D%0ADTEND%3A20261205T223000Z%0D%0ASUMMARY%3ASaturday%20evening%20hub%3A%20Olympiastadion%20Berlin%5C%2C%20Westend%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AOlympischer%20Platz%203%5C%2C%2014053%20Berlin%0D%0ADESCRIPTION%3AOption%203%20for%3A%20Saturday%20evening%20hub%5CnBerlin%27s%20largest%20stadium%20an%0D%0A%20d%20home%20of%20Hertha%20BSC.%5CnPrice%3A%200.00%20EUR%20%28area%20is%20free%20to%20visit%5C%3B%20event%20tick%0D%0A%20ets%20priced%20separately%29%5CnNot%20booked%20yet%20%E2%80%94%20contact%20them%20to%20reserve.%5CnWebsi%0D%0A%20te%3A%20https%3A%2F%2Fwww.olympiastadion.berlin%2Fen%2F%5CnBook%3A%20https%3A%2F%2Folympiastadion.be%0D%0A%20rlin%2Fen%2Fdates-and-tickets%2F%5CnPhone%3A%20%2B49%2030%20306%2088%20100%5CnE-mail%3A%20info%40olympia%0D%0A%20stadion.berlin%0D%0AURL%3Ahttps%3A%2F%2Folympiastadion.berlin%2Fen%2Fdates-and-tickets%2F%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="slot" id="slot-live-event" data-slot="live-event">
+  <div class="slot-head">
+    <p class="slot-when num">19:30–23:00</p>
+    <p class="slot-day">Sat 5 Dec 2026</p>
+    <h2>Saturday evening show</h2>
+    <p class="slot-note">Concert or football match on Saturday 5 December.</p>
+  </div>
+  <div>
+
+    <div class="tickets">
+      <article class="ticket top" data-option="live-event-1">
+        <div class="ticket-body">
+          <p class="rank">Top pick</p>
+          <h3><a href="https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930" target="_blank" rel="noopener">SDP &amp; The Capital Dance Orchestra</a></h3>
+          <p class="summary">Party-style arena concert at Uber Arena.</p>
+          <p class="address">Uber Arena, Uber-Platz 1, 10243 Berlin</p>
+          <ul>
+            <li>Sat 5 Dec 2026, 19:30</li>
+            <li>Close to Ostbahnhof</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>Right evening, tickets on sale</li>
+            <li>Same hub as the hotels</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930" target="_blank" rel="noopener">Book or enquire</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">639.20 EUR<small>8 tickets at 79.90 (lowest listed &#x27;from&#x27; price)</small></p>
+          <a class="btn" download="live-event-1.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20SDP%20%26%20The%20Capital%20Dance%20Orchest%0D%0A%20ra%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ae8676f6a94500c6c4e3c%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T183000Z%0D%0ADTEND%3A20261205T220000Z%0D%0ASUMMARY%3ASaturday%20evening%20show%3A%20SDP%20%26%20The%20Capital%20Dance%20Orchestra%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AUber%20Arena%5C%2C%20Uber-Platz%201%5C%2C%2010243%20Berlin%0D%0ADESCRIPTION%3AOption%201%20for%3A%20Saturday%20evening%20show%5CnParty-style%20arena%20concert%20%0D%0A%20at%20Uber%20Arena.%5CnPrice%3A%20639.20%20EUR%20%288%20tickets%20at%2079.90%20%28lowest%20listed%20%27from%0D%0A%20%27%20price%29%29%5CnNot%20booked%20yet%20%E2%80%94%20contact%20them%20to%20reserve.%5CnWebsite%3A%20https%3A%2F%2Fw%0D%0A%20ww.uber-arena.de%2Fen%2Fevents%2Fdetail%2Fsdp-orchestra%2F2026-12-05-1930%5CnBook%3A%20htt%0D%0A%20ps%3A%2F%2Fwww.uber-arena.de%2Fen%2Fevents%2Fdetail%2Fsdp-orchestra%2F2026-12-05-1930%0D%0AURL%3Ahttps%3A%2F%2Fwww.uber-arena.de%2Fen%2Fevents%2Fdetail%2Fsdp-orchestra%2F2026-12-05-193%0D%0A%200%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+      <article class="ticket " data-option="live-event-2">
+        <div class="ticket-body">
+          <p class="rank">Option 2</p>
+          <h3><a href="https://ticket-compare.com/football/bundesliga/union-berlin-vs-hamburger-sv-stadion-an-der-alten-forsterei-tickets-1223115/" target="_blank" rel="noopener">1. FC Union Berlin v Hamburger SV (Bundesliga)</a></h3>
+          <p class="summary">Bundesliga home match at Stadion An der Alten Försterei.</p>
+          <p class="address">Stadion An der Alten Försterei, An der Wuhlheide 263, 12555 Berlin</p>
+          <ul>
+            <li>Sat 5 Dec 2026, kick-off to be confirmed</li>
+            <li>Resale price estimate</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>Classic football night out</li>
+            <li>Official tickets are often member-priority, availability uncertain</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://ticket-compare.com/football/bundesliga/union-berlin-vs-hamburger-sv-stadion-an-der-alten-forsterei-tickets-1223115/" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://fc-union-berlin.de/en" target="_blank" rel="noopener">Book or enquire</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">1 176 EUR<small>8 tickets at 147 (lowest resale listing, not face value)</small></p>
+          <a class="btn" download="live-event-2.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%201.%20FC%20Union%20Berlin%20v%20Hamburger%20%0D%0A%20SV%20%28Bundesliga%29%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A1e3be6265fab89eebb8e%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T183000Z%0D%0ADTEND%3A20261205T220000Z%0D%0ASUMMARY%3ASaturday%20evening%20show%3A%201.%20FC%20Union%20Berlin%20v%20Hamburger%20SV%20%28Bundeslig%0D%0A%20a%29%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AStadion%20An%20der%20Alten%20F%C3%B6rsterei%5C%2C%20An%20der%20Wuhlheide%20263%5C%2C%2012555%20Ber%0D%0A%20lin%0D%0ADESCRIPTION%3AOption%202%20for%3A%20Saturday%20evening%20show%5CnBundesliga%20home%20match%20at%20S%0D%0A%20tadion%20An%20der%20Alten%20F%C3%B6rsterei.%5CnPrice%3A%201176.00%20EUR%20%288%20tickets%20at%20147%20%28low%0D%0A%20est%20resale%20listing%5C%2C%20not%20face%20value%29%29%5CnNot%20booked%20yet%20%E2%80%94%20contact%20them%20to%20%0D%0A%20reserve.%5CnWebsite%3A%20https%3A%2F%2Fticket-compare.com%2Ffootball%2Fbundesliga%2Funion-be%0D%0A%20rlin-vs-hamburger-sv-stadion-an-der-alten-forsterei-tickets-1223115%2F%5CnBook%0D%0A%20%3A%20https%3A%2F%2Ffc-union-berlin.de%2Fen%0D%0AURL%3Ahttps%3A%2F%2Ffc-union-berlin.de%2Fen%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+      <article class="ticket " data-option="live-event-3">
+        <div class="ticket-body">
+          <p class="rank">Option 3</p>
+          <h3><a href="https://www.konzerthaus.de" target="_blank" rel="noopener">Konzerthaus Berlin, Großer Saal concert</a></h3>
+          <p class="summary">Concert in the Großer Saal at Gendarmenmarkt.</p>
+          <p class="address">Gendarmenmarkt 2, 10117 Berlin</p>
+          <ul>
+            <li>Sat 5 Dec 2026, start time not listed</li>
+            <li>Classical style</li>
+          </ul>
+          <p class="why">Why it fits</p>
+          <ul>
+            <li>Central location and lowest price</li>
+            <li>Weaker fit for a bachelor party, confirm programme first</li>
+          </ul>
+          <ul class="contacts">
+            <li><a href="https://www.konzerthaus.de" target="_blank" rel="noopener">Website</a></li>
+            <li><a href="https://songkick.com/concerts/43256656-konzerthaus-berlin-at-grosser-saal-konzerthaus-berlin" target="_blank" rel="noopener">Book or enquire</a></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">204 EUR<small>8 tickets at 25.50</small></p>
+          <a class="btn" download="live-event-3.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%20%E2%80%94%20Konzerthaus%20Berlin%5C%2C%20Gro%C3%9Fer%20Sa%0D%0A%20al%20concert%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ae84e06a3dd94249891e9%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T183000Z%0D%0ADTEND%3A20261205T220000Z%0D%0ASUMMARY%3ASaturday%20evening%20show%3A%20Konzerthaus%20Berlin%5C%2C%20Gro%C3%9Fer%20Saal%20concert%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ALOCATION%3AGendarmenmarkt%202%5C%2C%2010117%20Berlin%0D%0ADESCRIPTION%3AOption%203%20for%3A%20Saturday%20evening%20show%5CnConcert%20in%20the%20Gro%C3%9Fer%20Saa%0D%0A%20l%20at%20Gendarmenmarkt.%5CnPrice%3A%20204.00%20EUR%20%288%20tickets%20at%2025.50%29%5CnNot%20booked%20y%0D%0A%20et%20%E2%80%94%20contact%20them%20to%20reserve.%5CnWebsite%3A%20https%3A%2F%2Fwww.konzerthaus.de%5CnBook%0D%0A%20%3A%20https%3A%2F%2Fsongkick.com%2Fconcerts%2F43256656-konzerthaus-berlin-at-grosser-saa%0D%0A%20l-konzerthaus-berlin%0D%0AURL%3Ahttps%3A%2F%2Fsongkick.com%2Fconcerts%2F43256656-konzerthaus-berlin-at-grosser-sa%0D%0A%20al-konzerthaus-berlin%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add to calendar</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+</div>
+
+<section class="band wrap" id="weather" data-section="weather">
+  <h2>Weather</h2>
+  <div class="days">
+    <div class="day"><b>Fri 4 Dec 2026</b><span class="t num">3° / 0°</span><span class="muted">Rain 1 of 5 years<br>Wind 30 km/h</span></div>
+
+    <div class="day"><b>Sat 5 Dec 2026</b><span class="t num">3° / 0°</span><span class="muted">Rain 3 of 5 years<br>Wind 30 km/h</span></div>
+
+    <div class="day"><b>Sun 6 Dec 2026</b><span class="t num">3° / 0°</span><span class="muted">Rain 3 of 5 years<br>Wind 28 km/h</span></div>
+
+  </div>
+  <p class="muted" style="margin-top:14px">Expect cold, damp days around 0 to 4 °C; use covered transport and prefer the indoor concert if the weather turns.</p>
+</section>
+
+<section class="band wrap" id="budget" data-section="budget">
+  <h2>Budget</h2>
+  <p class="verdict ok">Top picks fit the budget with 1 740.88 EUR to spare.</p>
+  <p class="muted">Totals include a 10 % contingency. Prices are for the whole group.</p>
+  <div class="meter" role="img" aria-label="Top picks 1 759.12 EUR of 3 500 EUR budget">
+    <div class="fill " style="width: 50.3%"></div>
+    <span class="mark num" style="left: 50.3%">Top picks 1 759.12 EUR</span>
+    <span class="limit num">Limit 3 500 EUR</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Part</th><th class="n">Cheapest</th><th class="n">Top pick</th><th class="n">Priciest</th></tr></thead>
+      <tbody>
+        <tr class=""><td>Hotel, 2 nights (4 rooms, 2 guests each)</td><td class="n">880 EUR</td><td class="n">960 EUR</td><td class="n">960 EUR</td></tr>
+
+        <tr class=""><td>Saturday evening hub</td><td class="n">0 EUR</td><td class="n">0 EUR</td><td class="n">0 EUR</td></tr>
+
+        <tr class=""><td>Saturday evening show</td><td class="n">204 EUR</td><td class="n">639.20 EUR</td><td class="n">1 176 EUR</td></tr>
+
+        <tr class="total"><td>Total with 10 % contingency</td><td class="n">1 192.40 EUR</td><td class="n">1 759.12 EUR</td><td class="n">2 349.60 EUR</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="band wrap" id="notes" data-section="notes">
+  <h2>Before you book</h2>
+  <div class="cols">
+    <div><h3>Good to know</h3><ul><li>Arrive Friday 4 Dec and set up; depart Sunday 6 Dec. Flights Warsaw-Berlin are excluded from the budget.</li><li>Airport transfer: Airport Express or S-Bahn with an ABC ticket (about 5 EUR per person each way); local transport for the group is estimated at about 130 EUR.</li><li>SDP also plays Uber Arena on Fri 4 Dec and Eisbären play there on Sun 6 Dec, so expect busy trains and hotels around Ostbahnhof.</li><li>Christmas markets are open in this period, which may raise hotel prices.</li><li>Leave at least 3 hours before the return flight on Sunday.</li><li>Nothing is booked; use the contacts on each option to book yourself.</li></ul></div>
+    <div><h3>Check when you call</h3><ul><li>Union v HSV kick-off is 15:30 on a suggested date per the club site (afternoon, not the Saturday evening you asked for).</li><li>The Union price is a resale estimate from a third-party page, not face value.</li><li>The SDP price is a &#x27;from&#x27; price, so the real group total can be higher.</li><li>Hotel rates are indicative figures from other dates; check live rates for 4-6 Dec 2026 and confirm twin rooms.</li><li>Hampton phone and e-mail and Goldmarie phone are unconfirmed.</li><li>Weather is climatology only; re-check the forecast from about 18 Nov 2026.</li><li>Ticketmaster data was unavailable (API key rejected); options come from web sources.</li><li>Konzerthaus programme and start time are not published; confirm before choosing.</li><li>Some street addresses and the Union stadium capacity come from general knowledge; verify when enquiring.</li></ul></div>
+  </div>
+</section>
+
+<section class="band wrap" id="calendar" data-section="calendar">
+  <h2>Calendar</h2>
+  <p>Add the whole program as tentative events, then swap in the option you book. Every option above also has its own calendar file.</p>
+  <p><a class="btn" download="program.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2Fevent-planner%2F%2Fplan-event%20workflow%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0AX-WR-CALNAME%3ABachelor%20weekend%20in%20Berlin%0D%0AX-WR-TIMEZONE%3AEurope%2FBerlin%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ae4c010ebfe5809890d60%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261204T140000Z%0D%0ADTEND%3A20261206T110000Z%0D%0ASUMMARY%3AHotel%5C%2C%202%20nights%20%284%20rooms%5C%2C%202%20guests%20each%29%20%28to%20choose%29%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ADESCRIPTION%3ANot%20booked%20yet.%20Choose%20one%20option%20and%20book%20it%20directly%3A%5Cn1.%20Hot%0D%0A%20el%20Indigo%20Berlin%20-%20East%20Side%20Gallery%20%E2%80%94%20960.00%20EUR%20%28Website%3A%20https%3A%2F%2Fwww.%0D%0A%20berlin.de%2Fhotels%2F8917323-1686962-hotel-indigo-berlin-east-side-gallery.htm%0D%0A%20l%5C%3B%20Book%3A%20https%3A%2F%2Fwww.berlin.de%2Fhotels%2F8917323-1686962-hotel-indigo-berlin%0D%0A%20-east-side-gallery.html%29%5Cn2.%20Hampton%20by%20Hilton%20Berlin%20City%20East%20Side%20Galle%0D%0A%20ry%20%E2%80%94%20920.00%20EUR%20%28Website%3A%20https%3A%2F%2Fwww.berlin.de%2Fhotels%2F8909160-1686962-h%0D%0A%20ampton-by-hilton-berlin-city-east-side-.html%5C%3B%20Book%3A%20https%3A%2F%2Fwww.berlin.de%0D%0A%20%2Fhotels%2F8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html%5C%3B%20Ph%0D%0A%20one%3A%20%2B49%2030%2029381380%5C%3B%20E-mail%3A%20info%40hamptonberlin-eastsidegallery.de%29%5Cn3.%20%0D%0A%20Hotel%20Goldmarie%20%E2%80%94%20880.00%20EUR%20%28Website%3A%20https%3A%2F%2Fwww.hrs.com%2Fen%2Fhotel%2F5653%0D%0A%2010%5C%3B%20Book%3A%20https%3A%2F%2Fwww.hrs.com%2Fen%2Fhotel%2F565310%29%0D%0AEND%3AVEVENT%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A4a5cc4525b3ab81c4921%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T160000Z%0D%0ADTEND%3A20261205T223000Z%0D%0ASUMMARY%3ASaturday%20evening%20hub%20%28to%20choose%29%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ADESCRIPTION%3ANot%20booked%20yet.%20Choose%20one%20option%20and%20book%20it%20directly%3A%5Cn1.%20Ube%0D%0A%20r%20Platz%20%28Uber%20Arena%20and%20Uber%20Eats%20Music%20Hall%20district%29%5C%2C%20Friedrichshain%20%0D%0A%20%E2%80%94%200.00%20EUR%20%28Website%3A%20https%3A%2F%2Fwww.uber-platz.de%5C%3B%20Book%3A%20https%3A%2F%2Fwww.uber-%0D%0A%20platz.de%2Fkontakt%5C%3B%20Phone%3A%20%2B49%201806%20570070%29%5Cn2.%20Stadion%20An%20der%20Alten%20F%C3%B6rst%0D%0A%20erei%20%28Union%20Berlin%29%5C%2C%20K%C3%B6penick%20%E2%80%94%200.00%20EUR%20%28Website%3A%20https%3A%2F%2Fwww.fc-unio%0D%0A%20n-berlin.de%2Fen%2F%5C%3B%20Book%3A%20https%3A%2F%2Ftickets.union-zeughaus.de%5C%3B%20Phone%3A%20%2B49%2030%20%0D%0A%2065%2066%2088%20100%5C%3B%20E-mail%3A%20verein%40fc-union-berlin.de%29%5Cn3.%20Olympiastadion%20Berli%0D%0A%20n%5C%2C%20Westend%20%E2%80%94%200.00%20EUR%20%28Website%3A%20https%3A%2F%2Fwww.olympiastadion.berlin%2Fen%2F%5C%3B%0D%0A%20%20Book%3A%20https%3A%2F%2Folympiastadion.berlin%2Fen%2Fdates-and-tickets%2F%5C%3B%20Phone%3A%20%2B49%2030%0D%0A%20%20306%2088%20100%5C%3B%20E-mail%3A%20info%40olympiastadion.berlin%29%0D%0AEND%3AVEVENT%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A77ea7df1aabd4139d1ab%40event-planner%0D%0ADTSTAMP%3A20261015T044314Z%0D%0ADTSTART%3A20261205T183000Z%0D%0ADTEND%3A20261205T220000Z%0D%0ASUMMARY%3ASaturday%20evening%20show%20%28to%20choose%29%0D%0ASTATUS%3ATENTATIVE%0D%0ATRANSP%3ATRANSPARENT%0D%0ADESCRIPTION%3ANot%20booked%20yet.%20Choose%20one%20option%20and%20book%20it%20directly%3A%5Cn1.%20SDP%0D%0A%20%20%26%20The%20Capital%20Dance%20Orchestra%20%E2%80%94%20639.20%20EUR%20%28Website%3A%20https%3A%2F%2Fwww.uber-a%0D%0A%20rena.de%2Fen%2Fevents%2Fdetail%2Fsdp-orchestra%2F2026-12-05-1930%5C%3B%20Book%3A%20https%3A%2F%2Fwww%0D%0A%20.uber-arena.de%2Fen%2Fevents%2Fdetail%2Fsdp-orchestra%2F2026-12-05-1930%29%5Cn2.%201.%20FC%20U%0D%0A%20nion%20Berlin%20v%20Hamburger%20SV%20%28Bundesliga%29%20%E2%80%94%201176.00%20EUR%20%28Website%3A%20https%3A%2F%2F%0D%0A%20ticket-compare.com%2Ffootball%2Fbundesliga%2Funion-berlin-vs-hamburger-sv-stadio%0D%0A%20n-an-der-alten-forsterei-tickets-1223115%2F%5C%3B%20Book%3A%20https%3A%2F%2Ffc-union-berlin.%0D%0A%20de%2Fen%29%5Cn3.%20Konzerthaus%20Berlin%5C%2C%20Gro%C3%9Fer%20Saal%20concert%20%E2%80%94%20204.00%20EUR%20%28Websi%0D%0A%20te%3A%20https%3A%2F%2Fwww.konzerthaus.de%5C%3B%20Book%3A%20https%3A%2F%2Fsongkick.com%2Fconcerts%2F43256%0D%0A%20656-konzerthaus-berlin-at-grosser-saal-konzerthaus-berlin%29%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Add whole program to calendar</a></p>
+</section>
+
+<section class="band wrap" id="sources" data-section="sources">
+  <h2>Sources</h2>
+  <ol class="sources">
+    <li><a href="https://www.bvg.de/en" target="_blank" rel="noopener">BVG</a></li>
+
+    <li><a href="https://www.fc-union-berlin.de/en/" target="_blank" rel="noopener">FC Union Berlin</a></li>
+
+    <li><a href="https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html" target="_blank" rel="noopener">Hampton by Hilton on Berlin.de</a></li>
+
+    <li><a href="https://www.hrs.com/en/hotel/565310" target="_blank" rel="noopener">Hotel Goldmarie on HRS</a></li>
+
+    <li><a href="https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html" target="_blank" rel="noopener">Hotel Indigo on Berlin.de</a></li>
+
+    <li><a href="https://www.olympiastadion.berlin/en/" target="_blank" rel="noopener">Olympiastadion Berlin</a></li>
+
+    <li><a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener">Open-Meteo Historical Weather API</a></li>
+
+    <li><a href="https://songkick.com/concerts/43256656-konzerthaus-berlin-at-grosser-saal-konzerthaus-berlin" target="_blank" rel="noopener">Songkick Konzerthaus listing</a></li>
+
+    <li><a href="https://ticket-compare.com/fixtures/union-berlin-vs-hamburger-sv-tickets/" target="_blank" rel="noopener">Ticket-Compare Union v HSV</a></li>
+
+    <li><a href="https://www.uber-arena.de" target="_blank" rel="noopener">Uber Arena</a></li>
+
+    <li><a href="https://www.uber-arena.de/en/events/" target="_blank" rel="noopener">Uber Arena events</a></li>
+
+  </ol>
+</section>
+
+<footer class="wrap">
+  <p>Prepared 15 Oct 2026. Prices and availability change — confirm both when you contact a place. Nothing in this guide has been booked or paid.</p>
+</footer>
+
+</main>
+</body>
+</html>

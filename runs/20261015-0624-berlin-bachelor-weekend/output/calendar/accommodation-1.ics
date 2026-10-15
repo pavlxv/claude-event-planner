@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — Hotel Indigo Berlin - East Side
+  Gallery
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:0d83c6e565e548452035@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261204T140000Z
+DTEND:20261206T110000Z
+SUMMARY:Hotel\, 2 nights (4 rooms\, 2 guests each): Hotel Indigo Berlin - E
+ ast Side Gallery
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Mühlenstr. 13-19\, 10243 Berlin
+DESCRIPTION:Option 1 for: Hotel\, 2 nights (4 rooms\, 2 guests each)\nHotel
+  on Uber Platz\, 1-3 minutes on foot from Uber Arena.\nPrice: 960.00 EUR (
+ 4 rooms x 2 nights x 120 (indicative rate\, no breakfast))\nNot booked yet
+  — contact them to reserve.\nWebsite: https://www.berlin.de/hotels/89173
+ 23-1686962-hotel-indigo-berlin-east-side-gallery.html\nBook: https://www.b
+ erlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-side-gallery.html
+URL:https://www.berlin.de/hotels/8917323-1686962-hotel-indigo-berlin-east-s
+ ide-gallery.html
+END:VEVENT
+END:VCALENDAR

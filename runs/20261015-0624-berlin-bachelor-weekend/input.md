@@ -1,0 +1,1 @@
+Bachelor weekend in Berlin for 8 friends flying in from Warsaw, 4–6 December 2026. Budget 3,500 EUR excluding flights. We want a concert or a football match on Saturday evening, one really good dinner, and a hotel close to the action.

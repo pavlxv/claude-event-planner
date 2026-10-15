@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ticketmaster": {
+      "command": "npx",
+      "args": ["-y", "@delorenj/mcp-server-ticketmaster"],
+      "env": {
+        "TICKETMASTER_API_KEY": "${TICKETMASTER_API_KEY}"
+      }
+    },
+    "open-meteo": {
+      "command": "npx",
+      "args": ["-y", "-p", "open-meteo-mcp-server", "open-meteo-mcp-server"]
+    }
+  }
+}

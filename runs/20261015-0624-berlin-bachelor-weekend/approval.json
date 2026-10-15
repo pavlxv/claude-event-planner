@@ -1,0 +1,9 @@
+{
+  "run_id": "20261015-0624-berlin-bachelor-weekend",
+  "decision": "approved",
+  "feedback": "",
+  "schedule_sha256": "b10b828d66a9a59006a4c170533cf232198ee2d2c9e1b5b07ffb335e1d18c355",
+  "plan_sha256": "e2c4f95db983edae20758d1a5476df81ac6ad3ab677fec244efa18d73fc38e78",
+  "decided_at": "2026-10-15T04:43:14+00:00",
+  "decided_by": "vladislavpavlov"
+}

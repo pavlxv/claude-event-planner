@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — 1. FC Union Berlin v Hamburger 
+ SV (Bundesliga)
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:1e3be6265fab89eebb8e@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T183000Z
+DTEND:20261205T220000Z
+SUMMARY:Saturday evening show: 1. FC Union Berlin v Hamburger SV (Bundeslig
+ a)
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Stadion An der Alten Försterei\, An der Wuhlheide 263\, 12555 Ber
+ lin
+DESCRIPTION:Option 2 for: Saturday evening show\nBundesliga home match at S
+ tadion An der Alten Försterei.\nPrice: 1176.00 EUR (8 tickets at 147 (low
+ est resale listing\, not face value))\nNot booked yet — contact them to 
+ reserve.\nWebsite: https://ticket-compare.com/football/bundesliga/union-be
+ rlin-vs-hamburger-sv-stadion-an-der-alten-forsterei-tickets-1223115/\nBook
+ : https://fc-union-berlin.de/en
+URL:https://fc-union-berlin.de/en
+END:VEVENT
+END:VCALENDAR

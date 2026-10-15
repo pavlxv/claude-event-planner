@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — SDP & The Capital Dance Orchest
+ ra
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:e8676f6a94500c6c4e3c@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T183000Z
+DTEND:20261205T220000Z
+SUMMARY:Saturday evening show: SDP & The Capital Dance Orchestra
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Uber Arena\, Uber-Platz 1\, 10243 Berlin
+DESCRIPTION:Option 1 for: Saturday evening show\nParty-style arena concert 
+ at Uber Arena.\nPrice: 639.20 EUR (8 tickets at 79.90 (lowest listed 'from
+ ' price))\nNot booked yet — contact them to reserve.\nWebsite: https://w
+ ww.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930\nBook: htt
+ ps://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-1930
+URL:https://www.uber-arena.de/en/events/detail/sdp-orchestra/2026-12-05-193
+ 0
+END:VEVENT
+END:VCALENDAR

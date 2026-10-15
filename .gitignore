@@ -1,0 +1,16 @@
+# secrets — never commit
+.env
+.env.*
+!.env.example
+
+# local Claude Code settings (personal permissions, approvals)
+.claude/settings.local.json
+
+# python / os noise
+__pycache__/
+*.pyc
+.DS_Store
+
+# pointer to the run currently being worked on (machine-local)
+runs/.active
+runs/*/workflow-state.tmp

@@ -1,0 +1,161 @@
+{
+  "limit_seconds": 120,
+  "agents": {
+    "venue-planner": {
+      "current": null,
+      "done": [
+        {
+          "option": "Uber Platz / Uber Arena district",
+          "started_at": "2026-10-15T04:26:17+00:00",
+          "started_ts": 1792038377.118261,
+          "ended_at": "2026-10-15T04:26:32+00:00",
+          "seconds": 16
+        },
+        {
+          "option": "Stadion An der Alten Försterei (Union Berlin)",
+          "started_at": "2026-10-15T04:26:33+00:00",
+          "started_ts": 1792038393.023766,
+          "ended_at": "2026-10-15T04:26:42+00:00",
+          "seconds": 10
+        },
+        {
+          "option": "Olympiastadion Berlin",
+          "started_at": "2026-10-15T04:26:42+00:00",
+          "started_ts": 1792038402.669676,
+          "ended_at": "2026-10-15T04:27:11+00:00",
+          "seconds": 28
+        },
+        {
+          "option": "Olympiastadion Berlin",
+          "started_at": "2026-10-15T04:37:28+00:00",
+          "started_ts": 1792039048.7165482,
+          "ended_at": "2026-10-15T04:37:40+00:00",
+          "seconds": 12
+        }
+      ],
+      "declined": []
+    },
+    "live-events-scout": {
+      "current": null,
+      "done": [
+        {
+          "option": "Union Berlin v Hamburg SV",
+          "started_at": "2026-10-15T04:26:20+00:00",
+          "started_ts": 1792038380.1018949,
+          "ended_at": "2026-10-15T04:26:51+00:00",
+          "seconds": 32
+        },
+        {
+          "option": "SDP Uber Arena",
+          "started_at": "2026-10-15T04:26:51+00:00",
+          "started_ts": 1792038411.773406,
+          "ended_at": "2026-10-15T04:26:51+00:00",
+          "seconds": 0
+        },
+        {
+          "option": "Konzerthaus Berlin Grosser Saal",
+          "started_at": "2026-10-15T04:26:51+00:00",
+          "started_ts": 1792038411.932796,
+          "ended_at": "2026-10-15T04:26:52+00:00",
+          "seconds": 0
+        },
+        {
+          "option": "Union Berlin v Hamburger SV match page",
+          "started_at": "2026-10-15T04:37:27+00:00",
+          "started_ts": 1792039047.483681,
+          "ended_at": "2026-10-15T04:37:56+00:00",
+          "seconds": 29
+        }
+      ],
+      "declined": []
+    },
+    "logistics-planner": {
+      "current": null,
+      "done": [
+        {
+          "option": "BVG",
+          "started_at": "2026-10-15T04:27:36+00:00",
+          "started_ts": 1792038456.20399,
+          "ended_at": "2026-10-15T04:27:46+00:00",
+          "seconds": 10
+        },
+        {
+          "option": "Hotel Indigo Berlin East Side Gallery",
+          "started_at": "2026-10-15T04:27:46+00:00",
+          "started_ts": 1792038466.173555,
+          "ended_at": "2026-10-15T04:27:57+00:00",
+          "seconds": 12
+        },
+        {
+          "option": "Hotel Goldmarie",
+          "started_at": "2026-10-15T04:27:57+00:00",
+          "started_ts": 1792038477.8922281,
+          "ended_at": "2026-10-15T04:28:06+00:00",
+          "seconds": 9
+        },
+        {
+          "option": "Hampton by Hilton Berlin City East Side Gallery",
+          "started_at": "2026-10-15T04:28:07+00:00",
+          "started_ts": 1792038487.028766,
+          "ended_at": "2026-10-15T04:28:43+00:00",
+          "seconds": 37
+        },
+        {
+          "option": "Hotel Indigo own site",
+          "started_at": "2026-10-15T04:34:41+00:00",
+          "started_ts": 1792038881.723739,
+          "ended_at": "2026-10-15T04:34:55+00:00",
+          "seconds": 13
+        },
+        {
+          "option": "Hotel Indigo",
+          "started_at": "2026-10-15T04:34:55+00:00",
+          "started_ts": 1792038895.2193742,
+          "ended_at": "2026-10-15T04:34:55+00:00",
+          "seconds": 0
+        },
+        {
+          "option": "Hampton by Hilton",
+          "started_at": "2026-10-15T04:34:55+00:00",
+          "started_ts": 1792038895.29689,
+          "ended_at": "2026-10-15T04:34:55+00:00",
+          "seconds": 0
+        },
+        {
+          "option": "Hotel Goldmarie",
+          "started_at": "2026-10-15T04:34:55+00:00",
+          "started_ts": 1792038895.374576,
+          "ended_at": "2026-10-15T04:35:15+00:00",
+          "seconds": 20
+        }
+      ],
+      "declined": []
+    },
+    "catering-planner": {
+      "current": {
+        "option": "Bräugier Ostkreuz",
+        "started_at": "2026-10-15T04:29:17+00:00",
+        "started_ts": 1792038557.2319932
+      },
+      "done": [
+        {
+          "option": "Jäger & Lustig",
+          "started_at": "2026-10-15T04:27:45+00:00",
+          "started_ts": 1792038465.338785,
+          "ended_at": "2026-10-15T04:28:58+00:00",
+          "seconds": 73
+        }
+      ],
+      "declined": [
+        {
+          "option": "Il Ritrovo",
+          "started_at": "2026-10-15T04:28:58+00:00",
+          "started_ts": 1792038538.184512,
+          "ended_at": "2026-10-15T04:29:08+00:00",
+          "seconds": 10,
+          "reason": "Il Ritrovo website is the Munich restaurant; Berlin branch not verified"
+        }
+      ]
+    }
+  }
+}

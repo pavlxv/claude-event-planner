@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — Konzerthaus Berlin\, Großer Sa
+ al concert
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:e84e06a3dd94249891e9@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T183000Z
+DTEND:20261205T220000Z
+SUMMARY:Saturday evening show: Konzerthaus Berlin\, Großer Saal concert
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Gendarmenmarkt 2\, 10117 Berlin
+DESCRIPTION:Option 3 for: Saturday evening show\nConcert in the Großer Saa
+ l at Gendarmenmarkt.\nPrice: 204.00 EUR (8 tickets at 25.50)\nNot booked y
+ et — contact them to reserve.\nWebsite: https://www.konzerthaus.de\nBook
+ : https://songkick.com/concerts/43256656-konzerthaus-berlin-at-grosser-saa
+ l-konzerthaus-berlin
+URL:https://songkick.com/concerts/43256656-konzerthaus-berlin-at-grosser-sa
+ al-konzerthaus-berlin
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,19 @@
+      <article class="ticket {{top_class}}" data-option="{{slot_id}}-{{rank}}">
+        <div class="ticket-body">
+          <p class="rank">{{rank_label}}</p>
+          <h3><a href="{{website}}" target="_blank" rel="noopener">{{name}}</a></h3>
+          <p class="summary">{{summary}}</p>
+          <p class="address">{{address}}</p>
+          <ul>
+{{facts_html}}
+          </ul>
+{{why_html}}
+          <ul class="contacts">
+{{contacts_html}}
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="price num" style="margin:0">{{price}}<small>{{price_basis}}</small></p>
+          <a class="btn" download="{{ics_name}}" href="{{ics_uri}}">Add to calendar</a>
+        </div>
+      </article>

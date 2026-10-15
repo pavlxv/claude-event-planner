@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — Uber Platz (Uber Arena and Uber
+  Eats Music Hall district)\, Friedrichshain
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:034f6bdf60bcfb58cecf@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T160000Z
+DTEND:20261205T223000Z
+SUMMARY:Saturday evening hub: Uber Platz (Uber Arena and Uber Eats Music Ha
+ ll district)\, Friedrichshain
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Uber-Platz 1\, 10243 Berlin
+DESCRIPTION:Option 1 for: Saturday evening hub\nEntertainment district with
+  arena\, music hall\, bars\, restaurants and two hotels on the square.\nPr
+ ice: 0.00 EUR (area is free to visit\; event tickets priced separately)\nN
+ ot booked yet — contact them to reserve.\nWebsite: https://www.uber-plat
+ z.de\nBook: https://www.uber-platz.de/kontakt\nPhone: +49 1806 570070
+URL:https://www.uber-platz.de/kontakt
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — Stadion An der Alten Försterei
+  (Union Berlin)\, Köpenick
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:54852b55077fc1858f11@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T160000Z
+DTEND:20261205T223000Z
+SUMMARY:Saturday evening hub: Stadion An der Alten Försterei (Union Berlin
+ )\, Köpenick
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:An der Wuhlheide 263\, 12555 Berlin
+DESCRIPTION:Option 2 for: Saturday evening hub\nHome ground of 1. FC Union 
+ Berlin\, in Köpenick.\nPrice: 0.00 EUR (area is free to visit\; match tic
+ kets priced separately)\nNot booked yet — contact them to reserve.\nWebs
+ ite: https://www.fc-union-berlin.de/en/\nBook: https://tickets.union-zeugh
+ aus.de\nPhone: +49 30 65 66 88 100\nE-mail: verein@fc-union-berlin.de
+URL:https://tickets.union-zeughaus.de
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "event": {
+    "title": "Platform team winter meetup",
+    "occasion": "Company team evening",
+    "summary": "An evening for 40 people in central Warsaw: a short talk with a projector, dinner with vegan and gluten-free options, and an optional late show. Every venue on the shortlist has step-free access.",
+    "city": "Warsaw", "country": "Poland", "country_code": "PL",
+    "timezone": "Europe/Warsaw", "date_start": "2026-11-20", "date_end": "2026-11-20",
+    "guests": 40, "budget_limit": 15000, "currency": "PLN", "language": "en"
+  },
+  "slots": [
+    {
+      "id": "venue", "category": "venue", "title": "Venue for talk and dinner",
+      "date": "2026-11-20", "start": "17:00", "end": "22:00",
+      "note": "Room for 40, projector, step-free",
+      "candidates": [
+        {"rank": 1, "name": "Example Loft Powiśle", "summary": "Converted print-works loft with a separate talk corner and a long communal table.",
+         "address": "ul. Przykładowa 12, 00-001 Warszawa",
+         "price": {"amount": 4200, "currency": "PLN", "basis": "room hire, 5 hours"},
+         "facts": ["Up to 60 seated", "Step-free entrance and lift", "Projector and screen included"],
+         "why": ["In-house kitchen can cook vegan and gluten-free", "8 minutes on foot from the metro"],
+         "contact": {"website": "https://example.com/loft", "booking": "https://example.com/loft/enquiry", "phone": "+48 22 000 00 01", "email": "events@example.com"},
+         "source": "https://example.com/loft/events"},
+        {"rank": 2, "name": "Sample Hall Mokotów", "summary": "Quiet event room above a café, simple and well lit.",
+         "address": "ul. Testowa 5, 02-001 Warszawa",
+         "price": {"amount": 3100, "currency": "PLN", "basis": "room hire, 5 hours"},
+         "facts": ["Up to 45 seated", "Step-free via side entrance"],
+         "why": ["Lowest price on the list", "Café can supply snacks"],
+         "contact": {"website": "https://example.com/hall", "phone": "+48 22 000 00 02"},
+         "source": "https://example.com/hall/rooms"},
+        {"rank": 3, "name": "Demo Rooftop Śródmieście", "summary": "Glass-walled rooftop room with a city view.",
+         "address": "al. Demo 30, 00-002 Warszawa",
+         "price": {"amount": 6800, "currency": "PLN", "basis": "room hire incl. AV technician"},
+         "facts": ["Up to 80 standing, 50 seated", "Lift to the top floor"],
+         "why": ["Strongest wow factor", "Technician on site"],
+         "contact": {"website": "https://example.com/rooftop", "booking": "https://example.com/rooftop/book", "email": "hello@example.com"},
+         "source": "https://example.com/rooftop"}
+      ]
+    },
+    {
+      "id": "dinner", "category": "catering", "title": "Dinner",
+      "date": "2026-11-20", "start": "18:30", "end": "21:30",
+      "note": "Vegan and gluten-free covered by every option",
+      "candidates": [
+        {"rank": 1, "name": "Example Kitchen Catering", "summary": "Seasonal Polish sharing plates served family style.",
+         "address": "Delivers across Warsaw",
+         "price": {"amount": 6000, "currency": "PLN", "basis": "150 PLN per person × 40"},
+         "facts": ["Separate vegan and gluten-free mains", "Staff of 3 included"],
+         "why": ["Works with the loft's kitchen"],
+         "contact": {"website": "https://example.com/kitchen", "email": "orders@example.com"},
+         "source": "https://example.com/kitchen/menus"},
+        {"rank": 2, "name": "Sample Street Food Co.", "summary": "Two food stations: pierogi and grilled vegetables.",
+         "address": "Delivers to central districts",
+         "price": {"amount": 4400, "currency": "PLN", "basis": "110 PLN per person × 40"},
+         "facts": ["Vegan pierogi", "Gluten-free on request (2 days notice)"],
+         "why": [],
+         "contact": {"website": "https://example.com/streetfood", "phone": "+48 500 000 003"},
+         "source": "https://example.com/streetfood/events"},
+        {"rank": 3, "name": "Demo Fine Dining", "summary": "Plated three-course dinner with wine pairing.",
+         "address": "Delivers across Warsaw",
+         "price": {"amount": 9600, "currency": "PLN", "basis": "240 PLN per person × 40"},
+         "facts": ["Fully plated service"], "why": ["For a more formal evening"],
+         "contact": {"website": "https://example.com/finedining", "booking": "https://example.com/finedining/quote"},
+         "source": "https://example.com/finedining"}
+      ]
+    },
+    {
+      "id": "late-show", "category": "live-event", "title": "Optional late show",
+      "date": "2026-11-20", "start": "21:30", "end": "23:00",
+      "shortlist_note": "Only two suitable shows that evening within 15 minutes of the venues.",
+      "candidates": [
+        {"rank": 1, "name": "Example Jazz Trio", "summary": "Small club gig, standing room.",
+         "address": "Example Club, ul. Nocna 3, Warszawa",
+         "price": {"amount": 2400, "currency": "PLN", "basis": "60 PLN × 40 tickets"},
+         "facts": ["Doors 21:00"], "why": ["Walkable from the loft"],
+         "contact": {"website": "https://example.com/jazz", "booking": "https://example.com/jazz/tickets"},
+         "source": "https://example.com/jazz"},
+        {"rank": 2, "name": "Sample Comedy Night (English)", "summary": "Stand-up in English, seated.",
+         "address": "Sample Theatre, ul. Śmiechu 1, Warszawa",
+         "price": {"amount": 3200, "currency": "PLN", "basis": "80 PLN × 40 tickets"},
+         "facts": ["Seated, step-free"], "why": [],
+         "contact": {"website": "https://example.com/comedy", "email": "box@example.com"},
+         "source": "https://example.com/comedy"}
+      ]
+    }
+  ],
+  "weather": {"method": "climate", "days": [{"date": "2026-11-20", "min_c": 0.6, "max_c": 5.2, "rain": "3 of 5 years", "wind_kmh": 24}],
+              "advice": "Expect cold, possibly wet weather — all options are indoors."},
+  "notes": ["Ask the venue whether the dinner caterer may use its kitchen.", "Book the venue first; caterers need the address."],
+  "open_issues": ["Rooftop price is from a 2025 brochure — confirm when you call."],
+  "sources": [
+    {"title": "Example Loft — events", "url": "https://example.com/loft/events"},
+    {"title": "Sample Hall — rooms", "url": "https://example.com/hall/rooms"},
+    {"title": "Example Kitchen — menus", "url": "https://example.com/kitchen/menus"}
+  ]
+}

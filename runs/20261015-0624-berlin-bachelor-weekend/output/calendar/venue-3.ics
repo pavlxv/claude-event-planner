@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — Olympiastadion Berlin\, Westend
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:017a731d87d58fbab0fa@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261205T160000Z
+DTEND:20261205T223000Z
+SUMMARY:Saturday evening hub: Olympiastadion Berlin\, Westend
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Olympischer Platz 3\, 14053 Berlin
+DESCRIPTION:Option 3 for: Saturday evening hub\nBerlin's largest stadium an
+ d home of Hertha BSC.\nPrice: 0.00 EUR (area is free to visit\; event tick
+ ets priced separately)\nNot booked yet — contact them to reserve.\nWebsi
+ te: https://www.olympiastadion.berlin/en/\nBook: https://olympiastadion.be
+ rlin/en/dates-and-tickets/\nPhone: +49 30 306 88 100\nE-mail: info@olympia
+ stadion.berlin
+URL:https://olympiastadion.berlin/en/dates-and-tickets/
+END:VEVENT
+END:VCALENDAR

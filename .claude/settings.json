@@ -1,0 +1,88 @@
+{
+  "enabledMcpjsonServers": [
+    "ticketmaster",
+    "open-meteo"
+  ],
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "mcp__ticketmaster__search_ticketmaster",
+      "mcp__open-meteo",
+      "Bash(python3 scripts/state.py:*)",
+      "Bash(python3 .claude/skills/artifact-validator/scripts/check_artifact.py:*)",
+      "Bash(python3 .claude/skills/ics-calendar/scripts/build_ics.py:*)",
+      "Bash(python3 .claude/skills/ics-calendar/scripts/validate_ics.py:*)",
+      "Bash(python3 scripts/timebox.py:*)",
+      "Bash(python3 .claude/skills/plan-data/scripts/plan_tool.py:*)",
+      "Bash(python3 .claude/skills/event-html-theme/scripts/render_html.py:*)",
+      "Bash(python3 .claude/skills/event-html-theme/scripts/check_html.py:*)",
+      "Write(runs/**)",
+      "Edit(runs/**)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(python3 scripts/approve.py:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/approval_guard.py\"",
+            "timeout": 20
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/no_leak_guard.py\"",
+            "timeout": 20
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__ticketmaster__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/country_scope_guard.py\"",
+            "timeout": 20
+          }
+        ]
+      },
+      {
+        "matcher": "WebFetch|WebSearch|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/timebox_guard.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/post_write_state.py\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "EVENT_PLANNER_TIMEBOX_SECONDS": "120"
+  }
+}

@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — Hampton by Hilton Berlin City E
+ ast Side Gallery
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:22ebac4f1823be12351e@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261204T140000Z
+DTEND:20261206T110000Z
+SUMMARY:Hotel\, 2 nights (4 rooms\, 2 guests each): Hampton by Hilton Berli
+ n City East Side Gallery
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Mildred-Harnack-Straße 15\, 10243 Berlin
+DESCRIPTION:Option 2 for: Hotel\, 2 nights (4 rooms\, 2 guests each)\nHotel
+  on Uber Platz\, about 100 m from the East Side Gallery.\nPrice: 920.00 EU
+ R (4 rooms x 2 nights x 115 (indicative rate))\nNot booked yet — contact
+  them to reserve.\nWebsite: https://www.berlin.de/hotels/8909160-1686962-h
+ ampton-by-hilton-berlin-city-east-side-.html\nBook: https://www.berlin.de/
+ hotels/8909160-1686962-hampton-by-hilton-berlin-city-east-side-.html\nPhon
+ e: +49 30 29381380\nE-mail: info@hamptonberlin-eastsidegallery.de
+URL:https://www.berlin.de/hotels/8909160-1686962-hampton-by-hilton-berlin-c
+ ity-east-side-.html
+END:VEVENT
+END:VCALENDAR

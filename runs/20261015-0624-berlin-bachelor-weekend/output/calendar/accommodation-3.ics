@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//event-planner//plan-event workflow//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bachelor weekend in Berlin — Hotel Goldmarie
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VEVENT
+UID:0d3e9412a3e3c60abb1a@event-planner
+DTSTAMP:20261015T044314Z
+DTSTART:20261204T140000Z
+DTEND:20261206T110000Z
+SUMMARY:Hotel\, 2 nights (4 rooms\, 2 guests each): Hotel Goldmarie
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Warschauer Str. 58\, 10243 Berlin
+DESCRIPTION:Option 3 for: Hotel\, 2 nights (4 rooms\, 2 guests each)\nHotel
+  on Warschauer Straße\, about 9 minutes on foot from Uber Arena.\nPrice: 
+ 880.00 EUR (4 rooms x 2 nights x 110 (indicative rate))\nNot booked yet 
+ — contact them to reserve.\nWebsite: https://www.hrs.com/en/hotel/565310
+ \nBook: https://www.hrs.com/en/hotel/565310
+URL:https://www.hrs.com/en/hotel/565310
+END:VEVENT
+END:VCALENDAR
